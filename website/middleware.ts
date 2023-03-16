@@ -3,6 +3,8 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
 export async function middleware(request: NextRequest) {
+  console.log(process.env.NEXT_PUBLIC_API_LINK);
+  console.log("test");
   let res = await fetch(`${process.env.NEXT_PUBLIC_API_LINK}/user/session`, {
     headers: {
       authorization: request.cookies.get("token")?.value as any,
