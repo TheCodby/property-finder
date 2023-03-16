@@ -8,14 +8,11 @@ export async function middleware(request: NextRequest) {
       authorization: request.cookies.get("token")?.value as any,
     },
   });
-  console.log(res);
-  const session = await res.json();
-  console.log(session);
   if (request.nextUrl.pathname.startsWith("/auth")) {
-    if (session?.id) {
+    if (res.ok) {
       return NextResponse.redirect(new URL("/", request.url));
     }
-  } else if (!session?.id && authorized.includes(request.nextUrl.pathname)) {
+  } else if (!res.ok && authorized.includes(request.nextUrl.pathname)) {
     return NextResponse.redirect(new URL("/auth/login", request.url));
   }
 }
