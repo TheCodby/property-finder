@@ -8,6 +8,7 @@ export async function middleware(request: NextRequest) {
       authorization: request.cookies.get("token")?.value as any,
     },
   });
+  console.log(res);
   const session = await res.json();
   console.log(session);
   if (request.nextUrl.pathname.startsWith("/auth")) {
