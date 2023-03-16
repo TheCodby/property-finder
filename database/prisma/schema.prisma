@@ -1,0 +1,115 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+  relationMode = "prisma"
+}
+model User {
+  id      Int      @id @default(autoincrement())
+  email   String   @unique
+  password    String
+  firstName String? @map("first_name")
+  lastName String? @map("last_name")
+  verified Boolean @default(false)
+  refreshTokens RefreshToken[]
+  posts Post[]
+  comments Comment[]
+  payments Payment[]
+  email_verification_tokens EmailVerificationToken[]
+  planId Int? @map("plan_id")
+  plan Plan? @relation(fields: [planId], references: [id], onDelete: Cascade)
+  admin Boolean @default(false)
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @default(now()) @updatedAt @map("updated_id")
+
+  @@map("users")
+}
+model EmailVerificationToken {
+  userId Int
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  token String @unique
+  expires DateTime
+  createdAt DateTime @default(now()) @map("created_at")
+  @@map("email_verification_tokens")
+}
+model Plan {
+  id      Int      @id @default(autoincrement())
+  name String
+  price Int
+  users User[]
+  @@map("plans")
+}
+model RefreshToken{
+  userId Int
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  deviceId String @unique
+  refreshToken String @map("refresh_token") @id
+  createdAt DateTime @map("created_at") @default(now())
+  expiresAt DateTime? @map("expires_at")
+
+  @@map("refresh_tokens")
+}
+model Post {
+  id      Int      @id @default(autoincrement())
+  title   String
+  slug String @unique
+  description String @db.Text
+  area Int
+  rooms Int
+  price Int @default(0)
+  floor Int
+  bathrooms Int
+  streetArea Int
+  lat Float
+  long Float
+  userId Int
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  comments Comment[]
+  attachments Attachment[]
+  typeId Int? @map("type_id")
+  type PropertyType? @relation(fields: [typeId], references: [id], onDelete: Cascade)
+  deleted Boolean @default(false)
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @default(now()) @updatedAt @map("updated_id")
+
+  @@map("posts")
+}
+model Attachment{
+  id Int @id @default(autoincrement())
+  key String
+  postId Int
+  post Post @relation(fields: [postId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now()) @map("created_at")
+  @@map("attachments")
+}
+model Comment {
+  id      Int      @id @default(autoincrement())
+  comment String
+  userId Int
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  postId Int
+  post Post @relation(fields: [postId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @default(now()) @updatedAt @map("updated_id")
+  @@map("comments")
+}
+model Payment {
+  id Int @id @default(autoincrement())
+  userId Int
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  amount Int
+  createdAt DateTime @default(now()) @map("created_at")
+  @@map("payments")
+}
+model PropertyType {
+  id      Int      @id @default(autoincrement())
+  name String
+  posts Post[]
+  @@map("property_types")
+}

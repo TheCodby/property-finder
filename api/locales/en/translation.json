@@ -1,0 +1,71 @@
+{
+  "NOT_FOUND": "Not found",
+  "CAN_NOT_DO_ACTION": "You can not do this action",
+  "INVALID": "Invalid",
+  "SOMETHING_WENT_WRONG": "Something went wrong",
+  "COULD_NOT_CONNECT_TO_DB": "Could not connect to database",
+  "UNAUTHORIZED": "Unauthorized",
+  "PASSWORD_NOT_MATCH": "Password does not match",
+  "USED_BEFORE": "{{fieldName}} has been used before",
+  "SIGN_IN": {
+    "SUCCESS": "Successfully logged in",
+    "INVALID_CREDENTIALS": "Invalid credentials"
+  },
+  "SIGN_UP": {
+    "ACCOUNT_CREATED": "Sign up successful",
+    "USER_ALREADY_EXISTS": "Email or username already exists",
+    "ERROR": "Sign up failed"
+  },
+  "LOGOUT": {
+    "SUCCESS": "Successfully logged out"
+  },
+  "USER": {
+    "NOT_FOUND": "User not found",
+    "DELETED": "User deleted",
+    "UPDATED": "User updated",
+    "ERROR": "User update failed",
+    "CREATED": "User created",
+    "UNVERIFIED": "User is not verified"
+  },
+  "POST": {
+    "NOT_FOUND": "Post not found",
+    "DELETED": "Post deleted",
+    "UPDATED": "Post updated",
+    "ERROR": "Post update failed",
+    "CREATED": "Post created",
+    "CREATE_ERROR": "Post creation failed",
+    "UPDATE_ERROR": "Post update failed",
+    "TYPE": {
+      "CREATE": {
+        "SUCCESS": "Successfully created new post type",
+        "ERROR": "Failed to create new post type"
+      },
+      "UPDATE": {
+        "SUCCESS": "Successfully updated post type",
+        "ERROR": "Failed to update post type"
+      },
+      "DELETE": {
+        "SUCCESS": "Successfully deleted post type",
+        "ERROR": "Failed to delete post type"
+      }
+    }
+  },
+  "COMMENT": {
+    "CREATE": {
+      "SUCCESS": "Successfully created new comment",
+      "ERROR": "Failed to create new comment"
+    },
+    "DELETE": {
+      "SUCCESS": "Successfully deleted comment",
+      "ERROR": "Failed to delete comment"
+    }
+  },
+  "EMAIL_VERIFICATION": {
+    "TOO_EARLY": "Please wait a two minutes before trying again",
+    "CANT_SEND_VERIFICATION_EMAIL": "Can not send verification email",
+    "EMAIL_SENT": "Verification email sent",
+    "TOKEN_EXPIRED": "Verification token expired",
+    "INVALID_TOKEN": "Invalid verification token",
+    "VERIFIED": "Email has been successfully activated."
+  }
+}
