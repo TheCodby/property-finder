@@ -14,7 +14,7 @@ import middleware from "i18next-http-middleware";
 import { admin } from "./api/middleware/admin";
 import adminRoute from "./api/routes/admin";
 import authorized from "./api/middleware/auth";
-import { getTypes } from "./api/controllers/posts";
+const https = require("https");
 import userRoutes from "./api/routes/user";
 import mainRoutes from "./api/routes/main";
 dotenv.config();

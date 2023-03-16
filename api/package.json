@@ -34,6 +34,7 @@
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "helmet": "^6.0.1",
+    "https": "^1.0.0",
     "i18next": "^22.4.10",
     "i18next-fs-backend": "^2.1.1",
     "i18next-http-middleware": "^3.2.2",
