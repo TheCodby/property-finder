@@ -1,0 +1,169 @@
+@tailwind base;
+@tailwind components;
+
+@layer components {
+  .card {
+    @apply bg-white;
+    @apply rounded-xl;
+    @apply shadow-md;
+    @apply p-4;
+    @apply flex;
+    @apply flex-col;
+    @apply gap-y-4;
+    @apply text-center;
+  }
+  .card .title {
+    @apply text-xl;
+    @apply font-bold;
+    @apply text-slate-900;
+  }
+  .card .image {
+    @apply rounded-xl;
+    @apply overflow-hidden;
+  }
+  .card .description {
+    @apply text-lg;
+    @apply text-slate-700;
+  }
+}
+a {
+  @apply transition-all duration-300;
+  @apply text-emerald-800;
+  @apply flex;
+  @apply flex-row;
+  @apply items-center;
+  @apply gap-x-1;
+}
+a:hover {
+  @apply text-emerald-600;
+}
+button {
+  @apply transition-all duration-300;
+  @apply inline-flex;
+  @apply justify-center;
+  @apply rounded-md;
+  @apply border;
+  @apply border-transparent;
+  @apply bg-emerald-600;
+  @apply px-4;
+  @apply py-2;
+  @apply text-sm;
+  @apply font-medium;
+  @apply text-emerald-900;
+  @apply hover:bg-emerald-200;
+  @apply focus:outline-none;
+  @apply disabled:bg-gray-300;
+  @apply text-white;
+}
+button:hover {
+  @apply bg-emerald-700;
+}
+button:disabled {
+  @apply bg-gray-500;
+}
+button:focus-visible {
+  @apply ring-2;
+  @apply ring-emerald-500;
+  @apply ring-offset-2;
+}
+input {
+  @apply bg-slate-100;
+  @apply p-3;
+  @apply rounded-xl;
+  @apply text-slate-900;
+  @apply flex;
+  @apply flex-row;
+  @apply items-center;
+  @apply gap-x-1;
+  @apply outline-none;
+  @apply border-2;
+  @apply transition-all duration-300;
+}
+
+input:hover {
+  @apply bg-slate-200;
+}
+input:focus {
+  @apply border-emerald-500;
+  @apply border-2;
+}
+textarea {
+  @apply bg-slate-100;
+  @apply p-3;
+  @apply rounded-xl;
+  @apply text-slate-900;
+  @apply flex;
+  @apply flex-row;
+  @apply items-center;
+  @apply gap-x-1;
+  @apply outline-none;
+  @apply border-2;
+  @apply transition-all duration-300;
+}
+
+textarea:hover {
+  @apply bg-slate-200;
+}
+textarea:focus {
+  @apply border-emerald-700;
+  @apply border-2;
+}
+select {
+  @apply bg-slate-100;
+  @apply p-2;
+  @apply rounded-xl;
+  @apply text-slate-900;
+  @apply flex;
+  @apply flex-row;
+  @apply items-center;
+  @apply gap-x-1;
+  @apply outline-none;
+  @apply border-2;
+  @apply transition-all duration-300;
+}
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #047857;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #047857 transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply flex;
+    @apply flex-col;
+    @apply min-h-screen;
+    @apply bg-slate-100;
+  }
+}
