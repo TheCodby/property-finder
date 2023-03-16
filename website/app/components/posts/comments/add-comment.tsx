@@ -3,7 +3,7 @@ import { getCookie } from "cookies-next";
 import React, { useState } from "react";
 import { useMutation, useQueryClient } from "react-query";
 import { useSetRecoilState } from "recoil";
-import { API_LINK, COMMENTS_PER_PAGE } from "../../../../constants";
+import { COMMENTS_PER_PAGE } from "../../../../constants";
 import { useNotifs } from "../../../../stores/notifs";
 import LoadingButton from "../../ui/loading-button";
 import { pageN } from "./comments-list";
@@ -15,14 +15,17 @@ const AddComment: React.FC<{ postId: number }> = ({ postId }) => {
 
   const mutation = useMutation(
     async ({ commentText }: { commentText: string }) => {
-      const res = await fetch(`${API_LINK}/posts/${postId}/comments`, {
-        method: "POST",
-        headers: {
-          authorization: getCookie("token") as any,
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ comment: commentText }),
-      });
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_API_LINK}/posts/${postId}/comments`,
+        {
+          method: "POST",
+          headers: {
+            authorization: getCookie("token") as any,
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ comment: commentText }),
+        }
+      );
       const data = await res.json();
       if (!res.ok) throw new Error(data.message);
       return data;

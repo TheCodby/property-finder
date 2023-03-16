@@ -12,7 +12,7 @@ const LoginForm: React.FC = () => {
   const sendLoginRequest = (e: any) => {
     e.preventDefault();
     setLoading(true);
-    fetch(`http://127.0.0.1:4000/auth/sign-in`, {
+    fetch(`${process.env.NEXT_PUBLIC_API_LINK}/auth/sign-in`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

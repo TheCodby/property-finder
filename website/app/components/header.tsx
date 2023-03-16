@@ -13,7 +13,7 @@ import { getCookie, setCookie } from "cookies-next";
 import { useQuery } from "react-query";
 const fetchSession = async () => {
   if (!getCookie("token")) return false;
-  const res = await fetch("http://127.0.0.1:4000/user/session", {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_LINK}/user/session`, {
     headers: {
       authorization: getCookie("token") as string,
     },

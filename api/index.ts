@@ -59,5 +59,5 @@ app.use("/posts", postsRoute);
 app.use("/user", authorized, userRoutes);
 app.use("/admin", authorized, admin, adminRoute);
 app.listen(process.env.PORT, () => {
-  console.log(`3akar backend started on port ${process.env.PORT}`);
+  console.log(`property finder backend started on port ${process.env.PORT}`);
 });

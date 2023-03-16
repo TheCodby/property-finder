@@ -6,9 +6,12 @@ import Pagination from "../components/ui/pagination";
 export const revalidate = 0;
 const ITEMS_PER_PAGE = 10;
 const getPosts = async (page: number) => {
-  const res = await fetch(`http://127.0.0.1:4000/posts?page=${page}`, {
-    next: { revalidate: 10 },
-  });
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_API_LINK}/posts?page=${page}`,
+    {
+      next: { revalidate: 10 },
+    }
+  );
   if (!res.ok) return null;
   return res.json();
 };

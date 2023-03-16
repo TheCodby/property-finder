@@ -2,7 +2,6 @@
 import { getCookie, setCookie } from "cookies-next";
 import { useEffect, useState } from "react";
 import { useQuery } from "react-query";
-import { API_LINK } from "../../constants";
 import LoadingSpinner from "../components/ui/loading-spinner";
 import { useRouter } from "next/navigation";
 import ActivateEmail from "../components/verify/activate-email";
@@ -15,7 +14,7 @@ const VerifyPage = ({ _, searchParams }: any) => {
     "verify-email",
     async () => {
       const res = await fetch(
-        `${API_LINK}/auth/verify-email/${searchParams.token}`,
+        `${process.env.NEXT_PUBLIC_API_LINK}/auth/verify-email/${searchParams.token}`,
         {
           headers: {
             authorization: getCookie("token") as string,

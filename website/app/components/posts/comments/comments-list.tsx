@@ -12,9 +12,9 @@ export const pageN = atom({
   default: 1,
 });
 const fetchComments = (postId: number = 1, page: number) =>
-  fetch(`http://127.0.0.1:4000/posts/${postId}/comments?page=${page}`).then(
-    (res) => res.json()
-  );
+  fetch(
+    `${process.env.NEXT_PUBLIC_API_LINK}/posts/${postId}/comments?page=${page}`
+  ).then((res) => res.json());
 
 const Comments: React.FC<{
   postId: number;

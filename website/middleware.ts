@@ -1,9 +1,10 @@
 // middleware.ts
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
+import { API_LINK } from "./constants";
 
 export async function middleware(request: NextRequest) {
-  let res = await fetch(`http://127.0.0.1:4000/user/session`, {
+  let res = await fetch(`${API_LINK}/user/session`, {
     headers: {
       authorization: request.cookies.get("token")?.value as any,
     },

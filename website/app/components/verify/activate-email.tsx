@@ -2,7 +2,6 @@ import { Dialog, Transition } from "@headlessui/react";
 import { getCookie } from "cookies-next";
 import { Fragment, useState } from "react";
 import { useMutation } from "react-query";
-import { API_LINK } from "../../../constants";
 import { useNotifs } from "../../../stores/notifs";
 import { getUserData } from "../../../utils/user";
 import LoadingButton from "../ui/loading-button";
@@ -22,11 +21,14 @@ const ActivateEmail = () => {
   }
   const sendVerification = async () => {
     setLoading(true);
-    const response = await fetch(`${API_LINK}/auth/send_verification_email`, {
-      headers: {
-        authorization: getCookie("token") as string,
-      },
-    });
+    const response = await fetch(
+      `${process.env.NEXT_PUBLIC_API_LINK}/auth/send_verification_email`,
+      {
+        headers: {
+          authorization: getCookie("token") as string,
+        },
+      }
+    );
     const data = await response.json();
     if (!response.ok) {
       setMessage({ message: data.message, type: "error" });

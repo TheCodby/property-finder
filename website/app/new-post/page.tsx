@@ -51,7 +51,7 @@ const NewPostPage: NextPage = () => {
   const router = useRouter();
   useEffect(() => {
     const loadTypes = async () => {
-      await fetch(`http://127.0.0.1:4000/post_types`)
+      await fetch(`${process.env.NEXT_PUBLIC_API_LINK}/post_types`)
         .then((res) => res.json())
         .then((data) => {
           if (data.length > 0) {
@@ -73,7 +73,7 @@ const NewPostPage: NextPage = () => {
     } else if (step === 1) {
       setStep(2);
       setLoading(true);
-      await fetch(`http://127.0.0.1:4000/posts`, {
+      await fetch(`${process.env.NEXT_PUBLIC_API_LINK}/posts`, {
         method: "POST",
         body: JSON.stringify(formState),
         headers: {

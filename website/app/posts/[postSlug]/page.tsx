@@ -7,7 +7,7 @@ import Comments from "../../components/posts/comments/comments-list";
 import AddComment from "../../components/posts/comments/add-comment";
 import { getSession } from "../../../utils/server/user";
 const getPost = async (slug: string) => {
-  const res = await fetch(`${process.env.API_LINK}/posts/${slug}`, {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_LINK}/posts/${slug}`, {
     next: {
       revalidate: 10,
     },

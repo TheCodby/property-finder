@@ -30,7 +30,7 @@ const SignupForm: React.FC = () => {
   const sendLoginRequest = (e: any) => {
     e.preventDefault();
     setLoading(true);
-    fetch(`http://127.0.0.1:4000/auth/sign-up`, {
+    fetch(`${process.env.NEXT_PUBLIC_API_LINK}/auth/sign-up`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
