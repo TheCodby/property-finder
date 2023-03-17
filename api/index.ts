@@ -86,6 +86,8 @@ if (process.env.NODE_ENV === "production") {
     });
 } else {
   app.listen(process.env.PORT, () => {
-    console.log(`Server is running in development mode at port 443`);
+    console.log(
+      `Server is running in development mode at port ${process.env.PORT}`
+    );
   });
 }
