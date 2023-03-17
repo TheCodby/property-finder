@@ -59,7 +59,6 @@ app.use("/auth", authRoutes);
 app.use("/posts", postsRoute);
 app.use("/user", authorized, userRoutes);
 app.use("/admin", authorized, admin, adminRoute);
-const httpServer = http.createServer(app);
 if (process.env.SSL_KEY && process.env.SSL_CERT) {
   app.use((req, res, next) => {
     console.log(req.headers.host);
@@ -69,7 +68,7 @@ if (process.env.SSL_KEY && process.env.SSL_CERT) {
       next();
     } else {
       // Redirect to HTTPS version of the request URL
-      res.redirect(`https://${process.env.API_HOST}${req.url}`);
+      res.redirect(`https://${req.headers.host}${req.url}`);
     }
   });
   https
@@ -84,6 +83,3 @@ if (process.env.SSL_KEY && process.env.SSL_CERT) {
       console.log(`server is runing at port 443`);
     });
 }
-httpServer.listen(80, () => {
-  console.log(`server is runing at port 80`);
-});
