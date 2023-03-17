@@ -11,6 +11,7 @@
     "website:dev": "yarn workspace @property-finder/website dev",
     "api:dev": "yarn workspace @property-finder/api dev",
     "api:start": "yarn workspace @property-finder/api start",
+    "api:stop": "yarn workspace @property-finder/api stop",
     "db:validate": "yarn workspace @property-finder/database prisma validate",
     "db:generate": "yarn workspace @property-finder/database prisma generate",
     "db:migrate": "yarn workspace @property-finder/database prisma migrate dev",
