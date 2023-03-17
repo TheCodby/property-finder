@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "cross-env NODE_ENV=development nodemon index.ts",
-    "start": "cross-env NODE_ENV=production pm2 start index.ts --watch",
+    "dev": "nodemon index.ts",
+    "start": "pm2 start index.ts --watch",
     "stop": "pm2 stop index.ts"
   },
   "author": "",
