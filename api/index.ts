@@ -68,7 +68,7 @@ if (process.env.SSL_KEY && process.env.SSL_CERT) {
       next();
     } else {
       // Redirect to HTTPS version of the request URL
-      res.redirect(`https://${req.headers.host}${req.url}`);
+      res.redirect(`https://${process.env.API_HOST}${req.url}`);
     }
   });
   https
