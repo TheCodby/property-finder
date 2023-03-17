@@ -62,7 +62,7 @@ app.use("/admin", authorized, admin, adminRoute);
 const httpServer = http.createServer(app);
 if (process.env.SSL_KEY && process.env.SSL_CERT) {
   app.use((req, res, next) => {
-    if (req.secure) {
+    if (req.secure && req.headers.host === process.env.API_HOST) {
       // If request is already secure (HTTPS), no need to redirect
       next();
     } else {
