@@ -26,12 +26,7 @@ export default function RootLayout({
 }) {
   return (
     <html dir="rtl" className={IBM_FONT.className} lang="ar">
-      <head>
-        <meta
-          http-equiv="Content-Security-Policy"
-          content="upgrade-insecure-requests"
-        />
-      </head>
+      <head />
       <body>
         <RootProvider>
           <Header />

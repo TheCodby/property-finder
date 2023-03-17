@@ -1,4 +1,4 @@
-import express from "express";
+import express, { Request, Response } from "express";
 import dotenv from "dotenv";
 import helmet from "helmet";
 import bodyParser from "body-parser";
@@ -15,6 +15,7 @@ import { admin } from "./api/middleware/admin";
 import adminRoute from "./api/routes/admin";
 import authorized from "./api/middleware/auth";
 const https = require("https");
+const http = require("http");
 import userRoutes from "./api/routes/user";
 import mainRoutes from "./api/routes/main";
 dotenv.config();
@@ -39,7 +40,7 @@ i18next
 const app = express();
 app.use(middleware.handle(i18next));
 app.use(helmet());
-app.use(bodyParser.json({ limit: "50mb" }));
+app.use(bodyParser.json({ limit: "10mb" }));
 app.use(
   cors({
     origin: "*",
@@ -58,6 +59,29 @@ app.use("/auth", authRoutes);
 app.use("/posts", postsRoute);
 app.use("/user", authorized, userRoutes);
 app.use("/admin", authorized, admin, adminRoute);
-app.listen(process.env.PORT, () => {
-  console.log(`property finder backend started on port ${process.env.PORT}`);
+const httpServer = http.createServer(app);
+if (process.env.SSL_KEY && process.env.SSL_CERT) {
+  app.use((req, res, next) => {
+    if (req.secure) {
+      // If request is already secure (HTTPS), no need to redirect
+      next();
+    } else {
+      // Redirect to HTTPS version of the request URL
+      res.redirect(`https://${req.headers.host}${req.url}`);
+    }
+  });
+  https
+    .createServer(
+      {
+        key: fs.readFileSync(process.env.SSL_KEY),
+        cert: fs.readFileSync(process.env.SSL_CERT),
+      },
+      app
+    )
+    .listen(443, () => {
+      console.log(`server is runing at port 443`);
+    });
+}
+httpServer.listen(80, () => {
+  console.log(`server is runing at port 80`);
 });
