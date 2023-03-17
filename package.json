@@ -9,11 +9,12 @@
     "website:build": "yarn workspace @property-finder/website build",
     "website:start": "yarn workspace @property-finder/website start",
     "website:dev": "yarn workspace @property-finder/website dev",
-    "api:start": "yarn workspace @property-finder/api dev",
+    "api:dev": "yarn workspace @property-finder/api dev",
+    "api:start": "yarn workspace @property-finder/api start",
     "db:validate": "yarn workspace @property-finder/database prisma validate",
     "db:generate": "yarn workspace @property-finder/database prisma generate",
     "db:migrate": "yarn workspace @property-finder/database prisma migrate dev",
-    "dev": "concurrently \" yarn api:start\" \" yarn website:dev \"",
+    "dev": "concurrently \" yarn api:dev\" \" yarn website:dev \"",
     "build": "concurrently \" yarn api:start\" \" yarn website:build && yarn website:start \""
   },
   "workspaces": [

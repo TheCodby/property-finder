@@ -59,27 +59,35 @@ app.use("/auth", authRoutes);
 app.use("/posts", postsRoute);
 app.use("/user", authorized, userRoutes);
 app.use("/admin", authorized, admin, adminRoute);
-if (process.env.SSL_KEY && process.env.SSL_CERT) {
+if (process.env.NODE_ENV === "production") {
   app.use((req, res, next) => {
     console.log(req.headers.host);
     console.log(process.env.API_HOST);
     if (req.secure && req.headers.host === process.env.API_HOST) {
       // If request is already secure (HTTPS), no need to redirect
+      console.log("mhjjmhjmmjh");
       next();
     } else {
       // Redirect to HTTPS version of the request URL
+      console.log("fsdfdssdf");
       res.redirect(`https://${process.env.API_HOST}${req.url}`);
     }
   });
   https
     .createServer(
       {
-        key: fs.readFileSync(process.env.SSL_KEY),
-        cert: fs.readFileSync(process.env.SSL_CERT),
+        key: fs.readFileSync(process.env.SSL_KEY as string),
+        cert: fs.readFileSync(process.env.SSL_CERT as string),
       },
       app
     )
     .listen(443, () => {
-      console.log(`server is runing at port 443`);
+      console.log(
+        `Server is running in producation mode on https://${process.env.API_HOST}`
+      );
     });
+} else {
+  app.listen(process.env.PORT, () => {
+    console.log(`Server is running in development mode at port 443`);
+  });
 }
