@@ -38,6 +38,17 @@ i18next
     },
   });
 const app = express();
+if (process.env.NODE_ENV === "production") {
+  app.use((req, res, next) => {
+    if (req.secure && req.headers.host === process.env.API_HOST) {
+      // If request is already secure (HTTPS), no need to redirect
+      next();
+    } else {
+      // Redirect to HTTPS version of the request URL
+      res.redirect(`https://${process.env.API_HOST}${req.url}`);
+    }
+  });
+}
 app.use(middleware.handle(i18next));
 app.use(helmet());
 app.use(bodyParser.json({ limit: "10mb" }));
@@ -60,19 +71,6 @@ app.use("/posts", postsRoute);
 app.use("/user", authorized, userRoutes);
 app.use("/admin", authorized, admin, adminRoute);
 if (process.env.NODE_ENV === "production") {
-  app.use((req, res, next) => {
-    console.log(req.headers.host);
-    console.log(process.env.API_HOST);
-    if (req.secure && req.headers.host === process.env.API_HOST) {
-      // If request is already secure (HTTPS), no need to redirect
-      console.log("mhjjmhjmmjh");
-      next();
-    } else {
-      // Redirect to HTTPS version of the request URL
-      console.log("fsdfdssdf");
-      res.redirect(`https://${process.env.API_HOST}${req.url}`);
-    }
-  });
   https
     .createServer(
       {
