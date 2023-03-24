@@ -1,8 +1,7 @@
 "use client";
 import React from "react";
 import { useRecoilState } from "recoil";
-import { notifsState, removeNotif } from "../../../stores/notifs";
-
+import { notifsState, removeNotif } from "@/stores/notifs";
 const Notifications: React.FC = () => {
   const [notifs, setNotifications] = useRecoilState(notifsState);
   if (notifs.length === 0) return <></>;

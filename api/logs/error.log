@@ -5031,3 +5031,523 @@
 [31m    at Zr.handleRequestError (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:171:6414)[39m
 [31m    at Zr.handleAndLogRequestError (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:171:5948)[39m
 [31m    at Zr.request (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:171:5786)[39m
+2023-03-23 01:02:30:230 [31merror[39m: [31mError: ENOENT: no such file or directory, open 'C:\Ahmed\programming\apps\3akar\project\api\api\controllers\config.json'[39m
+[31m    at Object.openSync (node:fs:600:3)[39m
+[31m    at Object.readFileSync (node:fs:468:35)[39m
+[31m    at C:\Ahmed\programming\apps\3akar\project\api\api\controllers\admin\config.ts:9:34[39m
+[31m    at Generator.next (<anonymous>)[39m
+[31m    at C:\Ahmed\programming\apps\3akar\project\api\api\controllers\admin\config.ts:8:71[39m
+[31m    at new Promise (<anonymous>)[39m
+[31m    at __awaiter (C:\Ahmed\programming\apps\3akar\project\api\api\controllers\admin\config.ts:4:12)[39m
+[31m    at getConfig (C:\Ahmed\programming\apps\3akar\project\api\api\controllers\admin\config.ts:6:64)[39m
+[31m    at Layer.handle [as handle_request] (C:\Ahmed\programming\apps\3akar\project\node_modules\express\lib\router\layer.js:95:5)[39m
+[31m    at next (C:\Ahmed\programming\apps\3akar\project\node_modules\express\lib\router\route.js:144:13)[39m
+2023-03-23 01:04:37:437 [31merror[39m: [31mError: ENOENT: no such file or directory, open '..\..\..\config.json'[39m
+[31m    at Object.openSync (node:fs:600:3)[39m
+[31m    at Object.readFileSync (node:fs:468:35)[39m
+[31m    at C:\Ahmed\programming\apps\3akar\project\api\api\controllers\admin\config.ts:9:34[39m
+[31m    at Generator.next (<anonymous>)[39m
+[31m    at C:\Ahmed\programming\apps\3akar\project\api\api\controllers\admin\config.ts:8:71[39m
+[31m    at new Promise (<anonymous>)[39m
+[31m    at __awaiter (C:\Ahmed\programming\apps\3akar\project\api\api\controllers\admin\config.ts:4:12)[39m
+[31m    at getConfig (C:\Ahmed\programming\apps\3akar\project\api\api\controllers\admin\config.ts:6:64)[39m
+[31m    at Layer.handle [as handle_request] (C:\Ahmed\programming\apps\3akar\project\node_modules\express\lib\router\layer.js:95:5)[39m
+[31m    at next (C:\Ahmed\programming\apps\3akar\project\node_modules\express\lib\router\route.js:144:13)[39m
+2023-03-23 12:49:26:4926 [31merror[39m: [31mError: [39m
+[31mInvalid `prisma.user.findUnique()` invocation in[39m
+[31mC:\Ahmed\programming\apps\3akar\project\api\api\middleware\admin.ts:11:36[39m
+
+[31m   8   next: NextFunction[39m
+[31m   9 ) => {[39m
+[31m  10   try {[39m
+[31m→ 11     const user = await prisma.user.findUnique([39m
+[31mCan't reach database server at `aws-eu-west-2.connect.psdb.cloud`:`3306`[39m
+
+[31mPlease make sure your database server is running at `aws-eu-west-2.connect.psdb.cloud`:`3306`.[39m
+[31m    at Zr.handleRequestError (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:171:6688)[39m
+[31m    at Zr.handleAndLogRequestError (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:171:5948)[39m
+[31m    at C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:174:3087[39m
+[31m    at async C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:174:3268[39m
+[31m    at async t._executeRequest (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:174:10726)[39m
+2023-03-23 12:49:27:4927 [31merror[39m: [31mError: [39m
+[31mInvalid `prisma.user.findUnique()` invocation in[39m
+[31mC:\Ahmed\programming\apps\3akar\project\api\api\middleware\admin.ts:11:36[39m
+
+[31m   8   next: NextFunction[39m
+[31m   9 ) => {[39m
+[31m  10   try {[39m
+[31m→ 11     const user = await prisma.user.findUnique([39m
+[31mCan't reach database server at `aws-eu-west-2.connect.psdb.cloud`:`3306`[39m
+
+[31mPlease make sure your database server is running at `aws-eu-west-2.connect.psdb.cloud`:`3306`.[39m
+[31m    at Zr.handleRequestError (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:171:6688)[39m
+[31m    at Zr.handleAndLogRequestError (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:171:5948)[39m
+[31m    at C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:174:3087[39m
+[31m    at async C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:174:3268[39m
+[31m    at async t._executeRequest (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:174:10726)[39m
+2023-03-23 20:43:36:4336 [31merror[39m: [31mError: [39m
+[31mInvalid `prisma.user.count()` invocation in[39m
+[31mC:\Ahmed\programming\apps\3akar\project\api\api\controllers\admin\main.ts:18:19[39m
+
+[31m  15 prisma.user.count(),[39m
+[31m  16 prisma.post.count(),[39m
+[31m  17 prisma.comment.count(),[39m
+[31m→ 18 prisma.user.count({[39m
+[31m       select: {[39m
+[31m         _count: {[39m
+[31m           select: {[39m
+[31m             _all: true[39m
+[31m           }[39m
+[31m         }[39m
+[31m       },[39m
+[31m       where: {[39m
+[31m         createdAt: '2023-03-23'[39m
+[31m                    ~~~~~~~~~~~~[39m
+[31m       }[39m
+[31m     })[39m
+
+[31mArgument createdAt: Got invalid value '2023-03-23' on prisma.aggregateUser. Provided String, expected DateTimeFilter or DateTime:[39m
+[31mtype DateTimeFilter {[39m
+[31m  equals?: DateTime[39m
+[31m  in?: List<DateTime>[39m
+[31m  notIn?: List<DateTime>[39m
+[31m  lt?: DateTime[39m
+[31m  lte?: DateTime[39m
+[31m  gt?: DateTime[39m
+[31m  gte?: DateTime[39m
+[31m  not?: DateTime | NestedDateTimeFilter[39m
+[31m}[39m
+[31mtype DateTimeFilter {[39m
+[31m  equals?: DateTime[39m
+[31m  in?: List<DateTime>[39m
+[31m  notIn?: List<DateTime>[39m
+[31m  lt?: DateTime[39m
+[31m  lte?: DateTime[39m
+[31m  gt?: DateTime[39m
+[31m  gte?: DateTime[39m
+[31m  not?: DateTime | NestedDateTimeFilter[39m
+[31m}[39m
+
+
+[31m    at ti.validate (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:149:91)[39m
+[31m    at Wr.createMessage (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:164:13655)[39m
+[31m    at C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:174:10933[39m
+[31m    at runInChildSpan (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:70:25817)[39m
+[31m    at t._executeRequest (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:174:10922)[39m
+2023-03-23 20:46:40:4640 [31merror[39m: [31mError: [39m
+[31mInvalid `prisma.$queryRaw()` invocation:[39m
+
+
+[31mRaw query failed. Code: `1146`. Message: `target: property-finder.-.primary: vttablet: rpc error: code = NotFound desc = Table 'property-finder.Post' doesn't exist (errno 1146) (sqlstate 42S02) (CallerID: nl7ouqgtlnzwr5e7803s): Sql: "select * from Post where 1 != 1", BindVars: {REDACTED}`[39m
+[31m    at Zr.handleRequestError (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:171:6414)[39m
+[31m    at Zr.handleAndLogRequestError (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:171:5948)[39m
+[31m    at Zr.request (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:171:5786)[39m
+2023-03-23 20:47:12:4712 [31merror[39m: [31mError: [39m
+[31mInvalid `prisma.$queryRaw()` invocation:[39m
+
+
+[31mRaw query failed. Code: `1146`. Message: `target: property-finder.-.primary: vttablet: rpc error: code = NotFound desc = Table 'property-finder.User' doesn't exist (errno 1146) (sqlstate 42S02) (CallerID: nl7ouqgtlnzwr5e7803s): Sql: "select * from `User` where 1 != 1", BindVars: {REDACTED}`[39m
+[31m    at Zr.handleRequestError (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:171:6414)[39m
+[31m    at Zr.handleAndLogRequestError (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:171:5948)[39m
+[31m    at Zr.request (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:171:5786)[39m
+2023-03-23 20:47:32:4732 [31merror[39m: [31mError: [39m
+[31mInvalid `prisma.$queryRaw()` invocation:[39m
+
+
+[31mRaw query failed. Code: `N/A`. Message: `N/A`[39m
+[31m    at Zr.handleRequestError (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:171:6414)[39m
+[31m    at Zr.handleAndLogRequestError (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:171:5948)[39m
+[31m    at Zr.request (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:171:5786)[39m
+2023-03-23 20:48:27:4827 [31merror[39m: [31mError: [39m
+[31mInvalid `prisma.$queryRaw()` invocation:[39m
+
+
+[31mRaw query failed. Code: `N/A`. Message: `N/A`[39m
+[31m    at Zr.handleRequestError (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:171:6414)[39m
+[31m    at Zr.handleAndLogRequestError (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:171:5948)[39m
+[31m    at Zr.request (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:171:5786)[39m
+2023-03-23 20:51:19:5119 [31merror[39m: [31mError: [39m
+[31mInvalid `prisma.$queryRaw()` invocation:[39m
+
+
+[31mRaw query failed. Code: `N/A`. Message: `N/A`[39m
+[31m    at Zr.handleRequestError (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:171:6414)[39m
+[31m    at Zr.handleAndLogRequestError (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:171:5948)[39m
+[31m    at Zr.request (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:171:5786)[39m
+2023-03-23 20:53:40:5340 [31merror[39m: [31mError: [39m
+[31mInvalid `prisma.$queryRaw()` invocation:[39m
+
+
+[31mRaw query failed. Code: `N/A`. Message: `N/A`[39m
+[31m    at Zr.handleRequestError (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:171:6414)[39m
+[31m    at Zr.handleAndLogRequestError (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:171:5948)[39m
+[31m    at Zr.request (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:171:5786)[39m
+2023-03-23 20:54:13:5413 [31merror[39m: [31mError: [39m
+[31mInvalid `prisma.$queryRaw()` invocation:[39m
+
+
+[31mRaw query failed. Code: `N/A`. Message: `N/A`[39m
+[31m    at Zr.handleRequestError (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:171:6414)[39m
+[31m    at Zr.handleAndLogRequestError (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:171:5948)[39m
+[31m    at Zr.request (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:171:5786)[39m
+2023-03-23 20:55:43:5543 [31merror[39m: [31mError: [39m
+[31mInvalid `prisma.$queryRaw()` invocation:[39m
+
+
+[31mRaw query failed. Code: `N/A`. Message: `N/A`[39m
+[31m    at Zr.handleRequestError (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:171:6414)[39m
+[31m    at Zr.handleAndLogRequestError (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:171:5948)[39m
+[31m    at Zr.request (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:171:5786)[39m
+2023-03-23 21:00:12:012 [31merror[39m: [31mError: [39m
+[31mInvalid `prisma.$queryRaw()` invocation:[39m
+
+
+[31mRaw query failed. Code: `N/A`. Message: `N/A`[39m
+[31m    at Zr.handleRequestError (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:171:6414)[39m
+[31m    at Zr.handleAndLogRequestError (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:171:5948)[39m
+[31m    at Zr.request (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:171:5786)[39m
+2023-03-23 21:01:05:15 [31merror[39m: [31mError: [39m
+[31mInvalid `prisma.$queryRaw()` invocation:[39m
+
+
+[31mRaw query failed. Code: `N/A`. Message: `N/A`[39m
+[31m    at Zr.handleRequestError (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:171:6414)[39m
+[31m    at Zr.handleAndLogRequestError (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:171:5948)[39m
+[31m    at Zr.request (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:171:5786)[39m
+2023-03-23 21:01:27:127 [31merror[39m: [31mTypeError: Do not know how to serialize a BigInt[39m
+[31m    at JSON.stringify (<anonymous>)[39m
+[31m    at stringify (C:\Ahmed\programming\apps\3akar\project\node_modules\express\lib\response.js:1150:12)[39m
+[31m    at ServerResponse.json (C:\Ahmed\programming\apps\3akar\project\node_modules\express\lib\response.js:271:14)[39m
+[31m    at C:\Ahmed\programming\apps\3akar\project\api\api\controllers\admin\main.ts:29:28[39m
+[31m    at Generator.next (<anonymous>)[39m
+[31m    at fulfilled (C:\Ahmed\programming\apps\3akar\project\api\api\controllers\admin\main.ts:5:58)[39m
+2023-03-23 21:02:09:29 [31merror[39m: [31mError: [39m
+[31mInvalid `prisma.$queryRaw()` invocation:[39m
+
+
+[31mRaw query failed. Code: `N/A`. Message: `N/A`[39m
+[31m    at Zr.handleRequestError (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:171:6414)[39m
+[31m    at Zr.handleAndLogRequestError (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:171:5948)[39m
+[31m    at Zr.request (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:171:5786)[39m
+2023-03-23 21:03:14:314 [31merror[39m: [31mTypeError: Do not know how to serialize a BigInt[39m
+[31m    at JSON.stringify (<anonymous>)[39m
+[31m    at stringify (C:\Ahmed\programming\apps\3akar\project\node_modules\express\lib\response.js:1150:12)[39m
+[31m    at ServerResponse.json (C:\Ahmed\programming\apps\3akar\project\node_modules\express\lib\response.js:271:14)[39m
+[31m    at C:\Ahmed\programming\apps\3akar\project\api\api\controllers\admin\main.ts:29:28[39m
+[31m    at Generator.next (<anonymous>)[39m
+[31m    at fulfilled (C:\Ahmed\programming\apps\3akar\project\api\api\controllers\admin\main.ts:5:58)[39m
+2023-03-23 21:12:34:1234 [31merror[39m: [31mError: [39m
+[31mInvalid `prisma.user.count()` invocation in[39m
+[31mC:\Ahmed\programming\apps\3akar\project\api\api\controllers\admin\main.ts:20:19[39m
+
+[31m  17 prisma.user.count(),[39m
+[31m  18 prisma.post.count(),[39m
+[31m  19 prisma.comment.count(),[39m
+[31m→ 20 prisma.user.count({[39m
+[31m       select: {[39m
+[31m         _count: {[39m
+[31m           select: {[39m
+[31m             _all: true[39m
+[31m           }[39m
+[31m         }[39m
+[31m       },[39m
+[31m       where: {[39m
+[31m         createdAt: {[39m
+[31m           gte: '2023-03-23'[39m
+[31m         }[39m
+[31m         ~~~~~~~~~~~~~~~~~~~[39m
+[31m       }[39m
+[31m     })[39m
+
+[31mArgument createdAt: Got invalid value [39m
+[31m{[39m
+[31m  gte: '2023-03-23'[39m
+[31m}[39m
+[31mon prisma.aggregateUser. Provided Json, expected DateTimeFilter or DateTime.[39m
+[31mtype DateTimeFilter {[39m
+[31m  equals?: DateTime[39m
+[31m  in?: List<DateTime>[39m
+[31m  notIn?: List<DateTime>[39m
+[31m  lt?: DateTime[39m
+[31m  lte?: DateTime[39m
+[31m  gt?: DateTime[39m
+[31m  gte?: DateTime[39m
+[31m  not?: DateTime | NestedDateTimeFilter[39m
+[31m}[39m
+
+
+[31m    at ti.validate (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:149:91)[39m
+[31m    at Wr.createMessage (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:164:13655)[39m
+[31m    at C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:174:10933[39m
+[31m    at runInChildSpan (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:70:25817)[39m
+[31m    at t._executeRequest (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:174:10922)[39m
+2023-03-23 21:34:11:3411 [31merror[39m: [31mError: [39m
+[31mInvalid `prisma.comment.count()` invocation in[39m
+[31mC:\Ahmed\programming\apps\3akar\project\api\api\controllers\admin\main.ts:18:22[39m
+
+[31m  15 ] = await Promise.all([[39m
+[31m  16   prisma.user.count(),[39m
+[31m  17   prisma.post.count(),[39m
+[31m→ 18   prisma.comment.count([39m
+[31mCan't reach database server at `aws-eu-west-2.connect.psdb.cloud`:`3306`[39m
+
+[31mPlease make sure your database server is running at `aws-eu-west-2.connect.psdb.cloud`:`3306`.[39m
+[31m    at Zr.handleRequestError (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:171:6414)[39m
+[31m    at Zr.handleAndLogRequestError (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:171:5948)[39m
+[31m    at Zr.request (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:171:5786)[39m
+2023-03-23 23:01:32:132 [31merror[39m: [31mError: [39m
+[31mInvalid `prisma.user.count()` invocation in[39m
+[31mC:\Ahmed\programming\apps\3akar\project\api\api\controllers\admin\main.ts:37:45[39m
+
+[31m  34 const usersCount = await prisma.user.count();[39m
+[31m  35 const postsCount = await prisma.post.count();[39m
+[31m  36 const commentsCount = await prisma.comment.count();[39m
+[31m→ 37 const newUsersCount = await prisma.user.count({[39m
+[31m       select: {[39m
+[31m         _count: {[39m
+[31m           select: {[39m
+[31m             _all: true[39m
+[31m           }[39m
+[31m         }[39m
+[31m       },[39m
+[31m       where: {[39m
+[31m         createdAt: '2023-03-23'[39m
+[31m                    ~~~~~~~~~~~~[39m
+[31m       }[39m
+[31m     })[39m
+
+[31mArgument createdAt: Got invalid value '2023-03-23' on prisma.aggregateUser. Provided String, expected DateTimeFilter or DateTime:[39m
+[31mtype DateTimeFilter {[39m
+[31m  equals?: DateTime[39m
+[31m  in?: List<DateTime>[39m
+[31m  notIn?: List<DateTime>[39m
+[31m  lt?: DateTime[39m
+[31m  lte?: DateTime[39m
+[31m  gt?: DateTime[39m
+[31m  gte?: DateTime[39m
+[31m  not?: DateTime | NestedDateTimeFilter[39m
+[31m}[39m
+[31mtype DateTimeFilter {[39m
+[31m  equals?: DateTime[39m
+[31m  in?: List<DateTime>[39m
+[31m  notIn?: List<DateTime>[39m
+[31m  lt?: DateTime[39m
+[31m  lte?: DateTime[39m
+[31m  gt?: DateTime[39m
+[31m  gte?: DateTime[39m
+[31m  not?: DateTime | NestedDateTimeFilter[39m
+[31m}[39m
+
+
+[31m    at ti.validate (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:149:91)[39m
+[31m    at Wr.createMessage (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:164:13655)[39m
+[31m    at C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:174:10933[39m
+[31m    at runInChildSpan (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:70:25817)[39m
+[31m    at t._executeRequest (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:174:10922)[39m
+2023-03-23 23:01:33:133 [31merror[39m: [31mError: [39m
+[31mInvalid `prisma.user.count()` invocation in[39m
+[31mC:\Ahmed\programming\apps\3akar\project\api\api\controllers\admin\main.ts:37:45[39m
+
+[31m  34 const usersCount = await prisma.user.count();[39m
+[31m  35 const postsCount = await prisma.post.count();[39m
+[31m  36 const commentsCount = await prisma.comment.count();[39m
+[31m→ 37 const newUsersCount = await prisma.user.count({[39m
+[31m       select: {[39m
+[31m         _count: {[39m
+[31m           select: {[39m
+[31m             _all: true[39m
+[31m           }[39m
+[31m         }[39m
+[31m       },[39m
+[31m       where: {[39m
+[31m         createdAt: '2023-03-23'[39m
+[31m                    ~~~~~~~~~~~~[39m
+[31m       }[39m
+[31m     })[39m
+
+[31mArgument createdAt: Got invalid value '2023-03-23' on prisma.aggregateUser. Provided String, expected DateTimeFilter or DateTime:[39m
+[31mtype DateTimeFilter {[39m
+[31m  equals?: DateTime[39m
+[31m  in?: List<DateTime>[39m
+[31m  notIn?: List<DateTime>[39m
+[31m  lt?: DateTime[39m
+[31m  lte?: DateTime[39m
+[31m  gt?: DateTime[39m
+[31m  gte?: DateTime[39m
+[31m  not?: DateTime | NestedDateTimeFilter[39m
+[31m}[39m
+[31mtype DateTimeFilter {[39m
+[31m  equals?: DateTime[39m
+[31m  in?: List<DateTime>[39m
+[31m  notIn?: List<DateTime>[39m
+[31m  lt?: DateTime[39m
+[31m  lte?: DateTime[39m
+[31m  gt?: DateTime[39m
+[31m  gte?: DateTime[39m
+[31m  not?: DateTime | NestedDateTimeFilter[39m
+[31m}[39m
+
+
+[31m    at ti.validate (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:149:91)[39m
+[31m    at Wr.createMessage (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:164:13655)[39m
+[31m    at C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:174:10933[39m
+[31m    at runInChildSpan (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:70:25817)[39m
+[31m    at t._executeRequest (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:174:10922)[39m
+2023-03-23 23:01:35:135 [31merror[39m: [31mError: [39m
+[31mInvalid `prisma.user.count()` invocation in[39m
+[31mC:\Ahmed\programming\apps\3akar\project\api\api\controllers\admin\main.ts:37:45[39m
+
+[31m  34 const usersCount = await prisma.user.count();[39m
+[31m  35 const postsCount = await prisma.post.count();[39m
+[31m  36 const commentsCount = await prisma.comment.count();[39m
+[31m→ 37 const newUsersCount = await prisma.user.count({[39m
+[31m       select: {[39m
+[31m         _count: {[39m
+[31m           select: {[39m
+[31m             _all: true[39m
+[31m           }[39m
+[31m         }[39m
+[31m       },[39m
+[31m       where: {[39m
+[31m         createdAt: '2023-03-23'[39m
+[31m                    ~~~~~~~~~~~~[39m
+[31m       }[39m
+[31m     })[39m
+
+[31mArgument createdAt: Got invalid value '2023-03-23' on prisma.aggregateUser. Provided String, expected DateTimeFilter or DateTime:[39m
+[31mtype DateTimeFilter {[39m
+[31m  equals?: DateTime[39m
+[31m  in?: List<DateTime>[39m
+[31m  notIn?: List<DateTime>[39m
+[31m  lt?: DateTime[39m
+[31m  lte?: DateTime[39m
+[31m  gt?: DateTime[39m
+[31m  gte?: DateTime[39m
+[31m  not?: DateTime | NestedDateTimeFilter[39m
+[31m}[39m
+[31mtype DateTimeFilter {[39m
+[31m  equals?: DateTime[39m
+[31m  in?: List<DateTime>[39m
+[31m  notIn?: List<DateTime>[39m
+[31m  lt?: DateTime[39m
+[31m  lte?: DateTime[39m
+[31m  gt?: DateTime[39m
+[31m  gte?: DateTime[39m
+[31m  not?: DateTime | NestedDateTimeFilter[39m
+[31m}[39m
+
+
+[31m    at ti.validate (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:149:91)[39m
+[31m    at Wr.createMessage (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:164:13655)[39m
+[31m    at C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:174:10933[39m
+[31m    at runInChildSpan (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:70:25817)[39m
+[31m    at t._executeRequest (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:174:10922)[39m
+2023-03-23 23:01:37:137 [31merror[39m: [31mError: [39m
+[31mInvalid `prisma.user.count()` invocation in[39m
+[31mC:\Ahmed\programming\apps\3akar\project\api\api\controllers\admin\main.ts:37:45[39m
+
+[31m  34 const usersCount = await prisma.user.count();[39m
+[31m  35 const postsCount = await prisma.post.count();[39m
+[31m  36 const commentsCount = await prisma.comment.count();[39m
+[31m→ 37 const newUsersCount = await prisma.user.count({[39m
+[31m       select: {[39m
+[31m         _count: {[39m
+[31m           select: {[39m
+[31m             _all: true[39m
+[31m           }[39m
+[31m         }[39m
+[31m       },[39m
+[31m       where: {[39m
+[31m         createdAt: '2023-03-23'[39m
+[31m                    ~~~~~~~~~~~~[39m
+[31m       }[39m
+[31m     })[39m
+
+[31mArgument createdAt: Got invalid value '2023-03-23' on prisma.aggregateUser. Provided String, expected DateTimeFilter or DateTime:[39m
+[31mtype DateTimeFilter {[39m
+[31m  equals?: DateTime[39m
+[31m  in?: List<DateTime>[39m
+[31m  notIn?: List<DateTime>[39m
+[31m  lt?: DateTime[39m
+[31m  lte?: DateTime[39m
+[31m  gt?: DateTime[39m
+[31m  gte?: DateTime[39m
+[31m  not?: DateTime | NestedDateTimeFilter[39m
+[31m}[39m
+[31mtype DateTimeFilter {[39m
+[31m  equals?: DateTime[39m
+[31m  in?: List<DateTime>[39m
+[31m  notIn?: List<DateTime>[39m
+[31m  lt?: DateTime[39m
+[31m  lte?: DateTime[39m
+[31m  gt?: DateTime[39m
+[31m  gte?: DateTime[39m
+[31m  not?: DateTime | NestedDateTimeFilter[39m
+[31m}[39m
+
+
+[31m    at ti.validate (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:149:91)[39m
+[31m    at Wr.createMessage (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:164:13655)[39m
+[31m    at C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:174:10933[39m
+[31m    at runInChildSpan (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:70:25817)[39m
+[31m    at t._executeRequest (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:174:10922)[39m
+2023-03-23 23:12:40:1240 [31merror[39m: [31mTypeError: Do not know how to serialize a BigInt[39m
+[31m    at JSON.stringify (<anonymous>)[39m
+[31m    at stringify (C:\Ahmed\programming\apps\3akar\project\node_modules\express\lib\response.js:1150:12)[39m
+[31m    at ServerResponse.json (C:\Ahmed\programming\apps\3akar\project\node_modules\express\lib\response.js:271:14)[39m
+[31m    at C:\Ahmed\programming\apps\3akar\project\api\api\controllers\admin\main.ts:36:28[39m
+[31m    at Generator.next (<anonymous>)[39m
+[31m    at fulfilled (C:\Ahmed\programming\apps\3akar\project\api\api\controllers\admin\main.ts:5:58)[39m
+2023-03-23 23:14:46:1446 [31merror[39m: [31mTypeError: Do not know how to serialize a BigInt[39m
+[31m    at JSON.stringify (<anonymous>)[39m
+[31m    at stringify (C:\Ahmed\programming\apps\3akar\project\node_modules\express\lib\response.js:1150:12)[39m
+[31m    at ServerResponse.json (C:\Ahmed\programming\apps\3akar\project\node_modules\express\lib\response.js:271:14)[39m
+[31m    at C:\Ahmed\programming\apps\3akar\project\api\api\controllers\admin\main.ts:36:28[39m
+[31m    at Generator.next (<anonymous>)[39m
+[31m    at fulfilled (C:\Ahmed\programming\apps\3akar\project\api\api\controllers\admin\main.ts:5:58)[39m
+2023-03-23 23:14:51:1451 [31merror[39m: [31mTypeError: Do not know how to serialize a BigInt[39m
+[31m    at JSON.stringify (<anonymous>)[39m
+[31m    at stringify (C:\Ahmed\programming\apps\3akar\project\node_modules\express\lib\response.js:1150:12)[39m
+[31m    at ServerResponse.json (C:\Ahmed\programming\apps\3akar\project\node_modules\express\lib\response.js:271:14)[39m
+[31m    at C:\Ahmed\programming\apps\3akar\project\api\api\controllers\admin\main.ts:36:28[39m
+[31m    at Generator.next (<anonymous>)[39m
+[31m    at fulfilled (C:\Ahmed\programming\apps\3akar\project\api\api\controllers\admin\main.ts:5:58)[39m
+2023-03-23 23:17:52:1752 [31merror[39m: [31mTypeError: Do not know how to serialize a BigInt[39m
+[31m    at JSON.stringify (<anonymous>)[39m
+[31m    at stringify (C:\Ahmed\programming\apps\3akar\project\node_modules\express\lib\response.js:1150:12)[39m
+[31m    at ServerResponse.json (C:\Ahmed\programming\apps\3akar\project\node_modules\express\lib\response.js:271:14)[39m
+[31m    at C:\Ahmed\programming\apps\3akar\project\api\api\controllers\admin\main.ts:40:28[39m
+[31m    at Generator.next (<anonymous>)[39m
+[31m    at fulfilled (C:\Ahmed\programming\apps\3akar\project\api\api\controllers\admin\main.ts:5:58)[39m
+2023-03-23 23:20:22:2022 [31merror[39m: [31mError: [39m
+[31mInvalid `prisma.$queryRaw()` invocation:[39m
+
+
+[31mRaw query failed. Code: `1105`. Message: `unknown error: syntax error at position 31`[39m
+[31m    at Zr.handleRequestError (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:171:6414)[39m
+[31m    at Zr.handleAndLogRequestError (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:171:5948)[39m
+[31m    at Zr.request (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:171:5786)[39m
+2023-03-23 23:20:36:2036 [31merror[39m: [31mError: [39m
+[31mInvalid `prisma.$queryRaw()` invocation:[39m
+
+
+[31mRaw query failed. Code: `1105`. Message: `unknown error: syntax error at position 39 near 'count'`[39m
+[31m    at Zr.handleRequestError (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:171:6414)[39m
+[31m    at Zr.handleAndLogRequestError (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:171:5948)[39m
+[31m    at Zr.request (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:171:5786)[39m
+2023-03-23 23:21:41:2141 [31merror[39m: [31mError: [39m
+[31mInvalid `prisma.$queryRaw()` invocation:[39m
+
+
+[31mRaw query failed. Code: `1105`. Message: `unknown error: syntax error at position 37 near 'int'`[39m
+[31m    at Zr.handleRequestError (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:171:6414)[39m
+[31m    at Zr.handleAndLogRequestError (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:171:5948)[39m
+[31m    at Zr.request (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:171:5786)[39m
+2023-03-23 23:21:57:2157 [31merror[39m: [31mError: [39m
+[31mInvalid `prisma.$queryRaw()` invocation:[39m
+
+
+[31mRaw query failed. Code: `1105`. Message: `unknown error: syntax error at position 37 near 'int'`[39m
+[31m    at Zr.handleRequestError (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:171:6414)[39m
+[31m    at Zr.handleAndLogRequestError (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:171:5948)[39m
+[31m    at Zr.request (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:171:5786)[39m

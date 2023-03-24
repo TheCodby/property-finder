@@ -10,6 +10,7 @@ import handleExcpetions from "../../utils/errors";
 import KnownError from "../../utils/KnownError";
 import { RequestWithUser } from "../middleware/auth";
 import { getUserById } from "../../utils/user";
+import { getConfigOption } from "../../utils/config";
 const sgMail = require("@sendgrid/mail");
 function generateVerificationCode(length: number) {
   const characters =
@@ -128,7 +129,7 @@ export const signUp = async (req: Request, res: Response): Promise<any> => {
     const hashedPassword: string = await bcrypt.hash(password, 10);
     const createdUser: User = await prisma.user.create({
       data: {
-        verified: process.env.VERIFYING_EMAILS === "false",
+        verified: (await getConfigOption("VERIFYING_EMAILS")) === "false",
         firstName,
         lastName,
         email,
@@ -179,7 +180,7 @@ export const sendVerificationEmail = async (
     const emailVerificationToken: string = generateVerificationCode(128);
     const msg = {
       to: user.email,
-      from: process.env.SENDGRID_EMAIL,
+      from: await getConfigOption("SENDGRID_EMAIL"),
       subject: "Verify your account, " + user.firstName,
       templateId: "d-9e47e1660b3c4c17bd96c2c7fc03dd2a",
       dynamicTemplateData: {
@@ -199,7 +200,7 @@ export const sendVerificationEmail = async (
         expires: new Date(new Date().getTime() + 1 * 60 * 60 * 1000),
       },
     });
-    sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+    sgMail.setApiKey(await getConfigOption("SENDGRID_API_KEY"));
     await sgMail.send(msg);
     return res.status(200).json({
       message: req.i18n.t("EMAIL_VERIFICATION.EMAIL_SENT"),

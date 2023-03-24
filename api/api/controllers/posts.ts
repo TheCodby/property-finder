@@ -7,6 +7,7 @@ import KnownError from "../../utils/KnownError";
 import { PutObjectCommand } from "@aws-sdk/client-s3";
 import { s3Client } from "../../utils/aws/s3";
 import { randomUUID } from "crypto";
+import { getCountryFromLatLong } from "../../utils/posts";
 const LIMIT_PER_PAGE = 10;
 export const deletePost = async (
   req: RequestWithUser,
@@ -108,12 +109,20 @@ export const createPost = async (
           handleExcpetions(error, req, res);
         }
       }
-      return res
+      res
         .json({
           message: req.i18n.t("POST.CREATED"),
           postSlug: post.slug,
         })
         .status(200);
+      await prisma.post.update({
+        where: {
+          id: post.id,
+        },
+        data: {
+          country: await getCountryFromLatLong(post.lat, post.long),
+        },
+      });
     }
   } catch (e: any) {
     e.userMessage = req.i18n.t("POST.CREATE_ERROR");

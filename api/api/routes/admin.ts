@@ -1,4 +1,6 @@
-import express from "express";
+import express, { Request, Response } from "express";
+import { getConfig, updateConfig } from "../controllers/admin/config";
+import { getGeneralReports } from "../controllers/admin/main";
 import { updatePost } from "../controllers/admin/posts";
 import {
   addType,
@@ -18,4 +20,11 @@ adminRoute.delete("/users/:userId", userExists, updateUser);
 adminRoute.put("/post_types/:typeId", updateType);
 adminRoute.post("/post_types/types", addType);
 adminRoute.delete("/post_types/:typeId", deleteType);
+
+adminRoute.get("/settings", getConfig);
+adminRoute.put("/settings", updateConfig);
+adminRoute.get("/check", (req: Request, res: Response) => {
+  return res.sendStatus(200);
+});
+adminRoute.get("/general-reports", getGeneralReports);
 export default adminRoute;

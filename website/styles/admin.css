@@ -1,0 +1,38 @@
+.sidebar-menu > *:not(:last-child) {
+  @apply border-b-2;
+  @apply border-white;
+}
+.sidebar-button {
+  @apply flex;
+  @apply flex-row;
+  @apply gap-2;
+  @apply items-center;
+  @apply justify-between;
+  @apply text-black;
+  @apply text-left;
+  @apply text-sm;
+  @apply font-semibold;
+  @apply p-3;
+  @apply transition-all;
+  @apply duration-300;
+  @apply rounded-xl;
+}
+.sidebar-button p {
+  @apply flex;
+  @apply flex-row;
+  @apply items-center;
+  @apply gap-2;
+}
+.sidebar-button:hover {
+  @apply bg-emerald-100;
+}
+.sidebar-menu {
+  @apply bg-gray-200;
+  @apply rounded-3xl;
+  @apply flex;
+  @apply flex-col;
+  @apply overflow-hidden;
+}
+.sidebar-menu .sidebar-button {
+  @apply rounded-none;
+}

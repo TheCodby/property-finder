@@ -5,12 +5,11 @@
   .card {
     @apply bg-white;
     @apply rounded-xl;
-    @apply shadow-md;
     @apply p-4;
     @apply flex;
     @apply flex-col;
     @apply gap-y-4;
-    @apply text-center;
+    @apply shadow-[0_0_10px_rgba(0,0,0,0.10)];
   }
   .card .title {
     @apply text-xl;
@@ -49,7 +48,6 @@ button {
   @apply py-2;
   @apply text-sm;
   @apply font-medium;
-  @apply text-emerald-900;
   @apply hover:bg-emerald-200;
   @apply focus:outline-none;
   @apply disabled:bg-gray-300;
@@ -120,41 +118,6 @@ select {
   @apply outline-none;
   @apply border-2;
   @apply transition-all duration-300;
-}
-.lds-ring {
-  display: inline-block;
-  position: relative;
-  width: 80px;
-  height: 80px;
-}
-.lds-ring div {
-  box-sizing: border-box;
-  display: block;
-  position: absolute;
-  width: 64px;
-  height: 64px;
-  margin: 8px;
-  border: 8px solid #047857;
-  border-radius: 50%;
-  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-  border-color: #047857 transparent transparent transparent;
-}
-.lds-ring div:nth-child(1) {
-  animation-delay: -0.45s;
-}
-.lds-ring div:nth-child(2) {
-  animation-delay: -0.3s;
-}
-.lds-ring div:nth-child(3) {
-  animation-delay: -0.15s;
-}
-@keyframes lds-ring {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
 }
 
 @tailwind utilities;

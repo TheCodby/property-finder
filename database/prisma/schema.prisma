@@ -29,6 +29,7 @@ model User {
   updatedAt DateTime @default(now()) @updatedAt @map("updated_id")
 
   @@map("users")
+  @@index([planId])
 }
 model EmailVerificationToken {
   userId Int
@@ -37,6 +38,8 @@ model EmailVerificationToken {
   expires DateTime
   createdAt DateTime @default(now()) @map("created_at")
   @@map("email_verification_tokens")
+
+  @@index([userId])
 }
 model Plan {
   id      Int      @id @default(autoincrement())
@@ -54,6 +57,8 @@ model RefreshToken{
   expiresAt DateTime? @map("expires_at")
 
   @@map("refresh_tokens")
+
+  @@index([userId])
 }
 model Post {
   id      Int      @id @default(autoincrement())
@@ -68,6 +73,7 @@ model Post {
   streetArea Int
   lat Float
   long Float
+  country String?
   userId Int
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
   comments Comment[]
@@ -79,6 +85,8 @@ model Post {
   updatedAt DateTime @default(now()) @updatedAt @map("updated_id")
 
   @@map("posts")
+  @@index([userId])
+  @@index([typeId])
 }
 model Attachment{
   id Int @id @default(autoincrement())
@@ -87,6 +95,7 @@ model Attachment{
   post Post @relation(fields: [postId], references: [id], onDelete: Cascade)
   createdAt DateTime @default(now()) @map("created_at")
   @@map("attachments")
+  @@index([postId])
 }
 model Comment {
   id      Int      @id @default(autoincrement())
@@ -98,6 +107,8 @@ model Comment {
   createdAt DateTime @default(now()) @map("created_at")
   updatedAt DateTime @default(now()) @updatedAt @map("updated_id")
   @@map("comments")
+  @@index([userId])
+  @@index([postId])
 }
 model Payment {
   id Int @id @default(autoincrement())
@@ -106,10 +117,15 @@ model Payment {
   amount Int
   createdAt DateTime @default(now()) @map("created_at")
   @@map("payments")
+  @@index([userId])
 }
 model PropertyType {
   id      Int      @id @default(autoincrement())
   name String
   posts Post[]
   @@map("property_types")
+}
+model VisitorCounter {
+  count Int @id
+  @@map("visitor_counter")
 }

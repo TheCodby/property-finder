@@ -14,6 +14,7 @@
     "api:stop": "yarn workspace @property-finder/api stop",
     "db:validate": "yarn workspace @property-finder/database prisma validate",
     "db:generate": "yarn workspace @property-finder/database prisma generate",
+    "db:push": "yarn workspace @property-finder/database prisma db push",
     "db:migrate": "yarn workspace @property-finder/database prisma migrate dev",
     "dev": "concurrently \" yarn api:dev\" \" yarn website:dev \"",
     "build": "concurrently \" yarn api:start\" \" yarn website:build && yarn website:start \""
@@ -25,7 +26,8 @@
   ],
   "dependencies": {
     "@manypkg/cli": "^0.20.0",
-    "@preconstruct/cli": "^2.3.0"
+    "@preconstruct/cli": "^2.3.0",
+    "countup.js": "^2.6.0"
   },
   "preconstruct": {
     "packages": [
