@@ -5,7 +5,7 @@ module.exports = {
       script: "./index.ts",
       interpreter: "",
       watch: ["api", "locales", "utils"],
-      ignore_watch: ["node_modules", "logs"],
+      ignore_watch: ["node_modules", "logs", "config.json", "access.log"],
     },
   ],
 };
