@@ -22,7 +22,7 @@ const Pagination = ({
     if (firstPage !== 1) {
       if (changePage) {
         pages.push(
-          <button key="back" onClick={() => changePage(1)} className={`p-3}`}>
+          <button key="back" onClick={() => changePage(1)} className={`p-3`}>
             <FaArrowCircleRight />
           </button>
         );
@@ -30,7 +30,7 @@ const Pagination = ({
         pages.push(
           <Link key={"back"} href={`${link}page=1`}>
             <button
-              className={`p-3}`}
+              className={`p-3`}
               // onClick={() => router.push(`${link}?page=1`)}
             >
               <FaArrowCircleRight />
@@ -46,7 +46,7 @@ const Pagination = ({
             key={i}
             onClick={() => changePage(i)}
             disabled={currentPage == i}
-            className={`p-3}`}
+            className={`p-3`}
           >
             {i}
           </button>
@@ -54,7 +54,7 @@ const Pagination = ({
       } else {
         pages.push(
           <Link key={i} href={`${link}page=${i}`}>
-            <button disabled={currentPage == i} className={`p-3}`}>
+            <button disabled={currentPage == i} className={`p-3`}>
               {i}
             </button>
           </Link>
@@ -67,7 +67,7 @@ const Pagination = ({
           <button
             key="next"
             onClick={() => changePage(pagesNum)}
-            className={`p-3}`}
+            className={`p-3`}
           >
             <FaArrowCircleLeft />
           </button>
@@ -75,7 +75,7 @@ const Pagination = ({
       } else {
         pages.push(
           <Link key={"next"} href={`${link}page=${pagesNum}`}>
-            <button className={`p-3}`}>
+            <button className={`p-3`}>
               <FaArrowCircleLeft />
             </button>
           </Link>

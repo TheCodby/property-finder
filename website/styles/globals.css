@@ -84,6 +84,7 @@ input:hover {
 input:focus {
   @apply border-emerald-500;
   @apply border-2;
+  @apply scale-105;
 }
 textarea {
   @apply bg-slate-100;

@@ -10,6 +10,77 @@ const userSchema = Joi.object({
   password: Joi.string().min(6).max(30),
   admin: Joi.boolean(),
 });
+const USERS_PER_PAGE = 20;
+export const getUsersCounts = async (req: RequestWithUser, res: Response) => {
+  try {
+    const [_count, verified_users_count] = await Promise.all([
+      await prisma.user.count(),
+      await prisma.user.count({
+        where: {
+          verified: true,
+        },
+      }),
+    ]);
+    return res.status(200).json({
+      _count,
+      verified_users_count,
+    });
+  } catch (e: any) {
+    handleExcpetions(e, req, res);
+  }
+};
+export const searchUsers = async (req: RequestWithUser, res: Response) => {
+  const page = req.query.page ? parseInt(req.query.page as string) : 1;
+  const { search }: any = req.query ? req.query : "";
+  try {
+    let whereCondition = {};
+    if (search && search !== "")
+      whereCondition = {
+        OR: [
+          {
+            id: {
+              equals: parseInt(search) > 0 ? parseInt(search) : 0,
+            },
+          },
+          {
+            email: {
+              equals: search,
+            },
+          },
+          {
+            firstName: {
+              contains: search,
+            },
+          },
+          {
+            lastName: {
+              contains: search,
+            },
+          },
+        ],
+      };
+    const [users, count] = await Promise.all([
+      await prisma.user.findMany({
+        skip: (page - 1) * USERS_PER_PAGE,
+        take: USERS_PER_PAGE,
+        where: whereCondition,
+        select: {
+          id: true,
+          firstName: true,
+          lastName: true,
+          email: true,
+          admin: true,
+        },
+      }),
+      await prisma.user.count({
+        where: whereCondition,
+      }),
+    ]);
+    return res.json({ users, _count: count }).status(200);
+  } catch (e: any) {
+    handleExcpetions(e, req, res);
+  }
+};
 export const deleteUser = async (req: RequestWithUser, res: Response) => {
   try {
     if (req.body.password) {

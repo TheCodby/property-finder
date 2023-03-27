@@ -5551,3 +5551,1068 @@
 [31m    at Zr.handleRequestError (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:171:6414)[39m
 [31m    at Zr.handleAndLogRequestError (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:171:5948)[39m
 [31m    at Zr.request (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:171:5786)[39m
+2023-03-27 14:47:16:4716 [31merror[39m: [31mError: [39m
+[31mInvalid `prisma.user.findMany()` invocation in[39m
+[31mC:\Ahmed\programming\apps\3akar\project\api\api\controllers\admin\users.ts:62:37[39m
+
+[31m  59       },[39m
+[31m  60     ],[39m
+[31m  61   };[39m
+[31m→ 62 const users = await prisma.user.findMany({[39m
+[31m       skip: 0,[39m
+[31m       take: 20,[39m
+[31m       where: {[39m
+[31m         OR: [[39m
+[31m           {[39m
+[31m             id: {[39m
+[31m               equals: ''[39m
+[31m             }[39m
+[31m             ~~~~~~~~~~~~[39m
+[31m           },[39m
+[31m           {[39m
+[31m             email: {[39m
+[31m               contains: ''[39m
+[31m             }[39m
+[31m           },[39m
+[31m           {[39m
+[31m             firstName: {[39m
+[31m               contains: ''[39m
+[31m             }[39m
+[31m           },[39m
+[31m           {[39m
+[31m             lastName: {[39m
+[31m               contains: ''[39m
+[31m             }[39m
+[31m           }[39m
+[31m         ][39m
+[31m       },[39m
+[31m       select: {[39m
+[31m         id: true,[39m
+[31m         firstName: true,[39m
+[31m         lastName: true,[39m
+[31m         email: true,[39m
+[31m         admin: true[39m
+[31m       }[39m
+[31m     })[39m
+
+[31mArgument id: Got invalid value [39m
+[31m{[39m
+[31m  equals: ''[39m
+[31m}[39m
+[31mon prisma.findManyUser. Provided Json, expected IntFilter or Int.[39m
+[31mtype IntFilter {[39m
+[31m  equals?: Int[39m
+[31m  in?: List<Int>[39m
+[31m  notIn?: List<Int>[39m
+[31m  lt?: Int[39m
+[31m  lte?: Int[39m
+[31m  gt?: Int[39m
+[31m  gte?: Int[39m
+[31m  not?: Int | NestedIntFilter[39m
+[31m}[39m
+
+
+[31m    at ti.validate (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:149:91)[39m
+[31m    at Wr.createMessage (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:164:13655)[39m
+[31m    at C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:174:10933[39m
+[31m    at runInChildSpan (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:70:25817)[39m
+[31m    at t._executeRequest (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:174:10922)[39m
+2023-03-27 14:47:17:4717 [31merror[39m: [31mError: [39m
+[31mInvalid `prisma.user.findMany()` invocation in[39m
+[31mC:\Ahmed\programming\apps\3akar\project\api\api\controllers\admin\users.ts:62:37[39m
+
+[31m  59       },[39m
+[31m  60     ],[39m
+[31m  61   };[39m
+[31m→ 62 const users = await prisma.user.findMany({[39m
+[31m       skip: 0,[39m
+[31m       take: 20,[39m
+[31m       where: {[39m
+[31m         OR: [[39m
+[31m           {[39m
+[31m             id: {[39m
+[31m               equals: ''[39m
+[31m             }[39m
+[31m             ~~~~~~~~~~~~[39m
+[31m           },[39m
+[31m           {[39m
+[31m             email: {[39m
+[31m               contains: ''[39m
+[31m             }[39m
+[31m           },[39m
+[31m           {[39m
+[31m             firstName: {[39m
+[31m               contains: ''[39m
+[31m             }[39m
+[31m           },[39m
+[31m           {[39m
+[31m             lastName: {[39m
+[31m               contains: ''[39m
+[31m             }[39m
+[31m           }[39m
+[31m         ][39m
+[31m       },[39m
+[31m       select: {[39m
+[31m         id: true,[39m
+[31m         firstName: true,[39m
+[31m         lastName: true,[39m
+[31m         email: true,[39m
+[31m         admin: true[39m
+[31m       }[39m
+[31m     })[39m
+
+[31mArgument id: Got invalid value [39m
+[31m{[39m
+[31m  equals: ''[39m
+[31m}[39m
+[31mon prisma.findManyUser. Provided Json, expected IntFilter or Int.[39m
+[31mtype IntFilter {[39m
+[31m  equals?: Int[39m
+[31m  in?: List<Int>[39m
+[31m  notIn?: List<Int>[39m
+[31m  lt?: Int[39m
+[31m  lte?: Int[39m
+[31m  gt?: Int[39m
+[31m  gte?: Int[39m
+[31m  not?: Int | NestedIntFilter[39m
+[31m}[39m
+
+
+[31m    at ti.validate (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:149:91)[39m
+[31m    at Wr.createMessage (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:164:13655)[39m
+[31m    at C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:174:10933[39m
+[31m    at runInChildSpan (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:70:25817)[39m
+[31m    at t._executeRequest (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:174:10922)[39m
+2023-03-27 14:47:19:4719 [31merror[39m: [31mError: [39m
+[31mInvalid `prisma.user.findMany()` invocation in[39m
+[31mC:\Ahmed\programming\apps\3akar\project\api\api\controllers\admin\users.ts:62:37[39m
+
+[31m  59       },[39m
+[31m  60     ],[39m
+[31m  61   };[39m
+[31m→ 62 const users = await prisma.user.findMany({[39m
+[31m       skip: 0,[39m
+[31m       take: 20,[39m
+[31m       where: {[39m
+[31m         OR: [[39m
+[31m           {[39m
+[31m             id: {[39m
+[31m               equals: ''[39m
+[31m             }[39m
+[31m             ~~~~~~~~~~~~[39m
+[31m           },[39m
+[31m           {[39m
+[31m             email: {[39m
+[31m               contains: ''[39m
+[31m             }[39m
+[31m           },[39m
+[31m           {[39m
+[31m             firstName: {[39m
+[31m               contains: ''[39m
+[31m             }[39m
+[31m           },[39m
+[31m           {[39m
+[31m             lastName: {[39m
+[31m               contains: ''[39m
+[31m             }[39m
+[31m           }[39m
+[31m         ][39m
+[31m       },[39m
+[31m       select: {[39m
+[31m         id: true,[39m
+[31m         firstName: true,[39m
+[31m         lastName: true,[39m
+[31m         email: true,[39m
+[31m         admin: true[39m
+[31m       }[39m
+[31m     })[39m
+
+[31mArgument id: Got invalid value [39m
+[31m{[39m
+[31m  equals: ''[39m
+[31m}[39m
+[31mon prisma.findManyUser. Provided Json, expected IntFilter or Int.[39m
+[31mtype IntFilter {[39m
+[31m  equals?: Int[39m
+[31m  in?: List<Int>[39m
+[31m  notIn?: List<Int>[39m
+[31m  lt?: Int[39m
+[31m  lte?: Int[39m
+[31m  gt?: Int[39m
+[31m  gte?: Int[39m
+[31m  not?: Int | NestedIntFilter[39m
+[31m}[39m
+
+
+[31m    at ti.validate (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:149:91)[39m
+[31m    at Wr.createMessage (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:164:13655)[39m
+[31m    at C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:174:10933[39m
+[31m    at runInChildSpan (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:70:25817)[39m
+[31m    at t._executeRequest (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:174:10922)[39m
+2023-03-27 14:48:11:4811 [31merror[39m: [31mError: [39m
+[31mInvalid `prisma.user.findMany()` invocation in[39m
+[31mC:\Ahmed\programming\apps\3akar\project\api\api\controllers\admin\users.ts:62:37[39m
+
+[31m  59       },[39m
+[31m  60     ],[39m
+[31m  61   };[39m
+[31m→ 62 const users = await prisma.user.findMany({[39m
+[31m       skip: 0,[39m
+[31m       take: 20,[39m
+[31m       where: {[39m
+[31m         OR: [[39m
+[31m           {[39m
+[31m             id: {[39m
+[31m               equals: ''[39m
+[31m             }[39m
+[31m             ~~~~~~~~~~~~[39m
+[31m           },[39m
+[31m           {[39m
+[31m             email: {[39m
+[31m               contains: ''[39m
+[31m             }[39m
+[31m           },[39m
+[31m           {[39m
+[31m             firstName: {[39m
+[31m               contains: ''[39m
+[31m             }[39m
+[31m           },[39m
+[31m           {[39m
+[31m             lastName: {[39m
+[31m               contains: ''[39m
+[31m             }[39m
+[31m           }[39m
+[31m         ][39m
+[31m       },[39m
+[31m       select: {[39m
+[31m         id: true,[39m
+[31m         firstName: true,[39m
+[31m         lastName: true,[39m
+[31m         email: true,[39m
+[31m         admin: true[39m
+[31m       }[39m
+[31m     })[39m
+
+[31mArgument id: Got invalid value [39m
+[31m{[39m
+[31m  equals: ''[39m
+[31m}[39m
+[31mon prisma.findManyUser. Provided Json, expected IntFilter or Int.[39m
+[31mtype IntFilter {[39m
+[31m  equals?: Int[39m
+[31m  in?: List<Int>[39m
+[31m  notIn?: List<Int>[39m
+[31m  lt?: Int[39m
+[31m  lte?: Int[39m
+[31m  gt?: Int[39m
+[31m  gte?: Int[39m
+[31m  not?: Int | NestedIntFilter[39m
+[31m}[39m
+
+
+[31m    at ti.validate (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:149:91)[39m
+[31m    at Wr.createMessage (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:164:13655)[39m
+[31m    at C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:174:10933[39m
+[31m    at runInChildSpan (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:70:25817)[39m
+[31m    at t._executeRequest (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:174:10922)[39m
+2023-03-27 15:00:16:016 [31merror[39m: [31mError: [39m
+[31mInvalid `prisma.user.findMany()` invocation in[39m
+[31mC:\Ahmed\programming\apps\3akar\project\api\api\controllers\admin\users.ts:62:37[39m
+
+[31m  59       },[39m
+[31m  60     ],[39m
+[31m  61   };[39m
+[31m→ 62 const users = await prisma.user.findMany({[39m
+[31m       skip: 0,[39m
+[31m       take: 20,[39m
+[31m       where: {[39m
+[31m         OR: [[39m
+[31m           {[39m
+[31m             id: {[39m
+[31m               equals: 'vdfvfdfv'[39m
+[31m             }[39m
+[31m             ~~~~~~~~~~~~~~~~~~~~[39m
+[31m           },[39m
+[31m           {[39m
+[31m             email: {[39m
+[31m               contains: 'vdfvfdfv'[39m
+[31m             }[39m
+[31m           },[39m
+[31m           {[39m
+[31m             firstName: {[39m
+[31m               contains: 'vdfvfdfv'[39m
+[31m             }[39m
+[31m           },[39m
+[31m           {[39m
+[31m             lastName: {[39m
+[31m               contains: 'vdfvfdfv'[39m
+[31m             }[39m
+[31m           }[39m
+[31m         ][39m
+[31m       },[39m
+[31m       select: {[39m
+[31m         id: true,[39m
+[31m         firstName: true,[39m
+[31m         lastName: true,[39m
+[31m         email: true,[39m
+[31m         admin: true[39m
+[31m       }[39m
+[31m     })[39m
+
+[31mArgument id: Got invalid value [39m
+[31m{[39m
+[31m  equals: 'vdfvfdfv'[39m
+[31m}[39m
+[31mon prisma.findManyUser. Provided Json, expected IntFilter or Int.[39m
+[31mtype IntFilter {[39m
+[31m  equals?: Int[39m
+[31m  in?: List<Int>[39m
+[31m  notIn?: List<Int>[39m
+[31m  lt?: Int[39m
+[31m  lte?: Int[39m
+[31m  gt?: Int[39m
+[31m  gte?: Int[39m
+[31m  not?: Int | NestedIntFilter[39m
+[31m}[39m
+
+
+[31m    at ti.validate (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:149:91)[39m
+[31m    at Wr.createMessage (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:164:13655)[39m
+[31m    at C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:174:10933[39m
+[31m    at runInChildSpan (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:70:25817)[39m
+[31m    at t._executeRequest (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:174:10922)[39m
+2023-03-27 15:00:17:017 [31merror[39m: [31mError: [39m
+[31mInvalid `prisma.user.findMany()` invocation in[39m
+[31mC:\Ahmed\programming\apps\3akar\project\api\api\controllers\admin\users.ts:62:37[39m
+
+[31m  59       },[39m
+[31m  60     ],[39m
+[31m  61   };[39m
+[31m→ 62 const users = await prisma.user.findMany({[39m
+[31m       skip: 0,[39m
+[31m       take: 20,[39m
+[31m       where: {[39m
+[31m         OR: [[39m
+[31m           {[39m
+[31m             id: {[39m
+[31m               equals: 'vdfvfdfv'[39m
+[31m             }[39m
+[31m             ~~~~~~~~~~~~~~~~~~~~[39m
+[31m           },[39m
+[31m           {[39m
+[31m             email: {[39m
+[31m               contains: 'vdfvfdfv'[39m
+[31m             }[39m
+[31m           },[39m
+[31m           {[39m
+[31m             firstName: {[39m
+[31m               contains: 'vdfvfdfv'[39m
+[31m             }[39m
+[31m           },[39m
+[31m           {[39m
+[31m             lastName: {[39m
+[31m               contains: 'vdfvfdfv'[39m
+[31m             }[39m
+[31m           }[39m
+[31m         ][39m
+[31m       },[39m
+[31m       select: {[39m
+[31m         id: true,[39m
+[31m         firstName: true,[39m
+[31m         lastName: true,[39m
+[31m         email: true,[39m
+[31m         admin: true[39m
+[31m       }[39m
+[31m     })[39m
+
+[31mArgument id: Got invalid value [39m
+[31m{[39m
+[31m  equals: 'vdfvfdfv'[39m
+[31m}[39m
+[31mon prisma.findManyUser. Provided Json, expected IntFilter or Int.[39m
+[31mtype IntFilter {[39m
+[31m  equals?: Int[39m
+[31m  in?: List<Int>[39m
+[31m  notIn?: List<Int>[39m
+[31m  lt?: Int[39m
+[31m  lte?: Int[39m
+[31m  gt?: Int[39m
+[31m  gte?: Int[39m
+[31m  not?: Int | NestedIntFilter[39m
+[31m}[39m
+
+
+[31m    at ti.validate (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:149:91)[39m
+[31m    at Wr.createMessage (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:164:13655)[39m
+[31m    at C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:174:10933[39m
+[31m    at runInChildSpan (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:70:25817)[39m
+[31m    at t._executeRequest (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:174:10922)[39m
+2023-03-27 15:00:20:020 [31merror[39m: [31mError: [39m
+[31mInvalid `prisma.user.findMany()` invocation in[39m
+[31mC:\Ahmed\programming\apps\3akar\project\api\api\controllers\admin\users.ts:62:37[39m
+
+[31m  59       },[39m
+[31m  60     ],[39m
+[31m  61   };[39m
+[31m→ 62 const users = await prisma.user.findMany({[39m
+[31m       skip: 0,[39m
+[31m       take: 20,[39m
+[31m       where: {[39m
+[31m         OR: [[39m
+[31m           {[39m
+[31m             id: {[39m
+[31m               equals: 'vdfvfdfv'[39m
+[31m             }[39m
+[31m             ~~~~~~~~~~~~~~~~~~~~[39m
+[31m           },[39m
+[31m           {[39m
+[31m             email: {[39m
+[31m               contains: 'vdfvfdfv'[39m
+[31m             }[39m
+[31m           },[39m
+[31m           {[39m
+[31m             firstName: {[39m
+[31m               contains: 'vdfvfdfv'[39m
+[31m             }[39m
+[31m           },[39m
+[31m           {[39m
+[31m             lastName: {[39m
+[31m               contains: 'vdfvfdfv'[39m
+[31m             }[39m
+[31m           }[39m
+[31m         ][39m
+[31m       },[39m
+[31m       select: {[39m
+[31m         id: true,[39m
+[31m         firstName: true,[39m
+[31m         lastName: true,[39m
+[31m         email: true,[39m
+[31m         admin: true[39m
+[31m       }[39m
+[31m     })[39m
+
+[31mArgument id: Got invalid value [39m
+[31m{[39m
+[31m  equals: 'vdfvfdfv'[39m
+[31m}[39m
+[31mon prisma.findManyUser. Provided Json, expected IntFilter or Int.[39m
+[31mtype IntFilter {[39m
+[31m  equals?: Int[39m
+[31m  in?: List<Int>[39m
+[31m  notIn?: List<Int>[39m
+[31m  lt?: Int[39m
+[31m  lte?: Int[39m
+[31m  gt?: Int[39m
+[31m  gte?: Int[39m
+[31m  not?: Int | NestedIntFilter[39m
+[31m}[39m
+
+
+[31m    at ti.validate (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:149:91)[39m
+[31m    at Wr.createMessage (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:164:13655)[39m
+[31m    at C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:174:10933[39m
+[31m    at runInChildSpan (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:70:25817)[39m
+[31m    at t._executeRequest (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:174:10922)[39m
+2023-03-27 15:00:25:025 [31merror[39m: [31mError: [39m
+[31mInvalid `prisma.user.findMany()` invocation in[39m
+[31mC:\Ahmed\programming\apps\3akar\project\api\api\controllers\admin\users.ts:62:37[39m
+
+[31m  59       },[39m
+[31m  60     ],[39m
+[31m  61   };[39m
+[31m→ 62 const users = await prisma.user.findMany({[39m
+[31m       skip: 0,[39m
+[31m       take: 20,[39m
+[31m       where: {[39m
+[31m         OR: [[39m
+[31m           {[39m
+[31m             id: {[39m
+[31m               equals: 'vdfvfdfv'[39m
+[31m             }[39m
+[31m             ~~~~~~~~~~~~~~~~~~~~[39m
+[31m           },[39m
+[31m           {[39m
+[31m             email: {[39m
+[31m               contains: 'vdfvfdfv'[39m
+[31m             }[39m
+[31m           },[39m
+[31m           {[39m
+[31m             firstName: {[39m
+[31m               contains: 'vdfvfdfv'[39m
+[31m             }[39m
+[31m           },[39m
+[31m           {[39m
+[31m             lastName: {[39m
+[31m               contains: 'vdfvfdfv'[39m
+[31m             }[39m
+[31m           }[39m
+[31m         ][39m
+[31m       },[39m
+[31m       select: {[39m
+[31m         id: true,[39m
+[31m         firstName: true,[39m
+[31m         lastName: true,[39m
+[31m         email: true,[39m
+[31m         admin: true[39m
+[31m       }[39m
+[31m     })[39m
+
+[31mArgument id: Got invalid value [39m
+[31m{[39m
+[31m  equals: 'vdfvfdfv'[39m
+[31m}[39m
+[31mon prisma.findManyUser. Provided Json, expected IntFilter or Int.[39m
+[31mtype IntFilter {[39m
+[31m  equals?: Int[39m
+[31m  in?: List<Int>[39m
+[31m  notIn?: List<Int>[39m
+[31m  lt?: Int[39m
+[31m  lte?: Int[39m
+[31m  gt?: Int[39m
+[31m  gte?: Int[39m
+[31m  not?: Int | NestedIntFilter[39m
+[31m}[39m
+
+
+[31m    at ti.validate (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:149:91)[39m
+[31m    at Wr.createMessage (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:164:13655)[39m
+[31m    at C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:174:10933[39m
+[31m    at runInChildSpan (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:70:25817)[39m
+[31m    at t._executeRequest (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:174:10922)[39m
+2023-03-27 15:00:48:048 [31merror[39m: [31mError: [39m
+[31mInvalid `prisma.user.findMany()` invocation in[39m
+[31mC:\Ahmed\programming\apps\3akar\project\api\api\controllers\admin\users.ts:62:37[39m
+
+[31m  59       },[39m
+[31m  60     ],[39m
+[31m  61   };[39m
+[31m→ 62 const users = await prisma.user.findMany({[39m
+[31m       skip: 0,[39m
+[31m       take: 20,[39m
+[31m       where: {[39m
+[31m         OR: [[39m
+[31m           {[39m
+[31m             id: {[39m
+[31m               equals: NaN[39m
+[31m             }[39m
+[31m             ~~~~~~~~~~~~~[39m
+[31m           },[39m
+[31m           {[39m
+[31m             email: {[39m
+[31m               contains: 'vdfvfdfv'[39m
+[31m             }[39m
+[31m           },[39m
+[31m           {[39m
+[31m             firstName: {[39m
+[31m               contains: 'vdfvfdfv'[39m
+[31m             }[39m
+[31m           },[39m
+[31m           {[39m
+[31m             lastName: {[39m
+[31m               contains: 'vdfvfdfv'[39m
+[31m             }[39m
+[31m           }[39m
+[31m         ][39m
+[31m       },[39m
+[31m       select: {[39m
+[31m         id: true,[39m
+[31m         firstName: true,[39m
+[31m         lastName: true,[39m
+[31m         email: true,[39m
+[31m         admin: true[39m
+[31m       }[39m
+[31m     })[39m
+
+[31mArgument id: Got invalid value [39m
+[31m{[39m
+[31m  equals: NaN[39m
+[31m}[39m
+[31mon prisma.findManyUser. Provided Json, expected IntFilter or Int.[39m
+[31mtype IntFilter {[39m
+[31m  equals?: Int[39m
+[31m  in?: List<Int>[39m
+[31m  notIn?: List<Int>[39m
+[31m  lt?: Int[39m
+[31m  lte?: Int[39m
+[31m  gt?: Int[39m
+[31m  gte?: Int[39m
+[31m  not?: Int | NestedIntFilter[39m
+[31m}[39m
+
+
+[31m    at ti.validate (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:149:91)[39m
+[31m    at Wr.createMessage (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:164:13655)[39m
+[31m    at C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:174:10933[39m
+[31m    at runInChildSpan (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:70:25817)[39m
+[31m    at t._executeRequest (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:174:10922)[39m
+2023-03-27 15:00:50:050 [31merror[39m: [31mError: [39m
+[31mInvalid `prisma.user.findMany()` invocation in[39m
+[31mC:\Ahmed\programming\apps\3akar\project\api\api\controllers\admin\users.ts:62:37[39m
+
+[31m  59       },[39m
+[31m  60     ],[39m
+[31m  61   };[39m
+[31m→ 62 const users = await prisma.user.findMany({[39m
+[31m       skip: 0,[39m
+[31m       take: 20,[39m
+[31m       where: {[39m
+[31m         OR: [[39m
+[31m           {[39m
+[31m             id: {[39m
+[31m               equals: NaN[39m
+[31m             }[39m
+[31m             ~~~~~~~~~~~~~[39m
+[31m           },[39m
+[31m           {[39m
+[31m             email: {[39m
+[31m               contains: 'vdfvfdfv'[39m
+[31m             }[39m
+[31m           },[39m
+[31m           {[39m
+[31m             firstName: {[39m
+[31m               contains: 'vdfvfdfv'[39m
+[31m             }[39m
+[31m           },[39m
+[31m           {[39m
+[31m             lastName: {[39m
+[31m               contains: 'vdfvfdfv'[39m
+[31m             }[39m
+[31m           }[39m
+[31m         ][39m
+[31m       },[39m
+[31m       select: {[39m
+[31m         id: true,[39m
+[31m         firstName: true,[39m
+[31m         lastName: true,[39m
+[31m         email: true,[39m
+[31m         admin: true[39m
+[31m       }[39m
+[31m     })[39m
+
+[31mArgument id: Got invalid value [39m
+[31m{[39m
+[31m  equals: NaN[39m
+[31m}[39m
+[31mon prisma.findManyUser. Provided Json, expected IntFilter or Int.[39m
+[31mtype IntFilter {[39m
+[31m  equals?: Int[39m
+[31m  in?: List<Int>[39m
+[31m  notIn?: List<Int>[39m
+[31m  lt?: Int[39m
+[31m  lte?: Int[39m
+[31m  gt?: Int[39m
+[31m  gte?: Int[39m
+[31m  not?: Int | NestedIntFilter[39m
+[31m}[39m
+
+
+[31m    at ti.validate (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:149:91)[39m
+[31m    at Wr.createMessage (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:164:13655)[39m
+[31m    at C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:174:10933[39m
+[31m    at runInChildSpan (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:70:25817)[39m
+[31m    at t._executeRequest (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:174:10922)[39m
+2023-03-27 15:00:53:053 [31merror[39m: [31mError: [39m
+[31mInvalid `prisma.user.findMany()` invocation in[39m
+[31mC:\Ahmed\programming\apps\3akar\project\api\api\controllers\admin\users.ts:62:37[39m
+
+[31m  59       },[39m
+[31m  60     ],[39m
+[31m  61   };[39m
+[31m→ 62 const users = await prisma.user.findMany({[39m
+[31m       skip: 0,[39m
+[31m       take: 20,[39m
+[31m       where: {[39m
+[31m         OR: [[39m
+[31m           {[39m
+[31m             id: {[39m
+[31m               equals: NaN[39m
+[31m             }[39m
+[31m             ~~~~~~~~~~~~~[39m
+[31m           },[39m
+[31m           {[39m
+[31m             email: {[39m
+[31m               contains: 'vdfvfdfv'[39m
+[31m             }[39m
+[31m           },[39m
+[31m           {[39m
+[31m             firstName: {[39m
+[31m               contains: 'vdfvfdfv'[39m
+[31m             }[39m
+[31m           },[39m
+[31m           {[39m
+[31m             lastName: {[39m
+[31m               contains: 'vdfvfdfv'[39m
+[31m             }[39m
+[31m           }[39m
+[31m         ][39m
+[31m       },[39m
+[31m       select: {[39m
+[31m         id: true,[39m
+[31m         firstName: true,[39m
+[31m         lastName: true,[39m
+[31m         email: true,[39m
+[31m         admin: true[39m
+[31m       }[39m
+[31m     })[39m
+
+[31mArgument id: Got invalid value [39m
+[31m{[39m
+[31m  equals: NaN[39m
+[31m}[39m
+[31mon prisma.findManyUser. Provided Json, expected IntFilter or Int.[39m
+[31mtype IntFilter {[39m
+[31m  equals?: Int[39m
+[31m  in?: List<Int>[39m
+[31m  notIn?: List<Int>[39m
+[31m  lt?: Int[39m
+[31m  lte?: Int[39m
+[31m  gt?: Int[39m
+[31m  gte?: Int[39m
+[31m  not?: Int | NestedIntFilter[39m
+[31m}[39m
+
+
+[31m    at ti.validate (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:149:91)[39m
+[31m    at Wr.createMessage (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:164:13655)[39m
+[31m    at C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:174:10933[39m
+[31m    at runInChildSpan (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:70:25817)[39m
+[31m    at t._executeRequest (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:174:10922)[39m
+2023-03-27 15:00:58:058 [31merror[39m: [31mError: [39m
+[31mInvalid `prisma.user.findMany()` invocation in[39m
+[31mC:\Ahmed\programming\apps\3akar\project\api\api\controllers\admin\users.ts:62:37[39m
+
+[31m  59       },[39m
+[31m  60     ],[39m
+[31m  61   };[39m
+[31m→ 62 const users = await prisma.user.findMany({[39m
+[31m       skip: 0,[39m
+[31m       take: 20,[39m
+[31m       where: {[39m
+[31m         OR: [[39m
+[31m           {[39m
+[31m             id: {[39m
+[31m               equals: NaN[39m
+[31m             }[39m
+[31m             ~~~~~~~~~~~~~[39m
+[31m           },[39m
+[31m           {[39m
+[31m             email: {[39m
+[31m               contains: 'vdfvfdfv'[39m
+[31m             }[39m
+[31m           },[39m
+[31m           {[39m
+[31m             firstName: {[39m
+[31m               contains: 'vdfvfdfv'[39m
+[31m             }[39m
+[31m           },[39m
+[31m           {[39m
+[31m             lastName: {[39m
+[31m               contains: 'vdfvfdfv'[39m
+[31m             }[39m
+[31m           }[39m
+[31m         ][39m
+[31m       },[39m
+[31m       select: {[39m
+[31m         id: true,[39m
+[31m         firstName: true,[39m
+[31m         lastName: true,[39m
+[31m         email: true,[39m
+[31m         admin: true[39m
+[31m       }[39m
+[31m     })[39m
+
+[31mArgument id: Got invalid value [39m
+[31m{[39m
+[31m  equals: NaN[39m
+[31m}[39m
+[31mon prisma.findManyUser. Provided Json, expected IntFilter or Int.[39m
+[31mtype IntFilter {[39m
+[31m  equals?: Int[39m
+[31m  in?: List<Int>[39m
+[31m  notIn?: List<Int>[39m
+[31m  lt?: Int[39m
+[31m  lte?: Int[39m
+[31m  gt?: Int[39m
+[31m  gte?: Int[39m
+[31m  not?: Int | NestedIntFilter[39m
+[31m}[39m
+
+
+[31m    at ti.validate (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:149:91)[39m
+[31m    at Wr.createMessage (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:164:13655)[39m
+[31m    at C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:174:10933[39m
+[31m    at runInChildSpan (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:70:25817)[39m
+[31m    at t._executeRequest (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:174:10922)[39m
+2023-03-27 15:01:25:125 [31merror[39m: [31mError: [39m
+[31mInvalid `prisma.user.findMany()` invocation in[39m
+[31mC:\Ahmed\programming\apps\3akar\project\api\api\controllers\admin\users.ts:62:37[39m
+
+[31m  59       },[39m
+[31m  60     ],[39m
+[31m  61   };[39m
+[31m→ 62 const users = await prisma.user.findMany({[39m
+[31m       skip: 0,[39m
+[31m       take: 20,[39m
+[31m       where: {[39m
+[31m         OR: [[39m
+[31m           {[39m
+[31m             id: {[39m
+[31m               equals: null[39m
+[31m                       ~~~~[39m
+[31m             }[39m
+[31m           },[39m
+[31m           {[39m
+[31m             email: {[39m
+[31m               contains: 'vdfvfdfv'[39m
+[31m             }[39m
+[31m           },[39m
+[31m           {[39m
+[31m             firstName: {[39m
+[31m               contains: 'vdfvfdfv'[39m
+[31m             }[39m
+[31m           },[39m
+[31m           {[39m
+[31m             lastName: {[39m
+[31m               contains: 'vdfvfdfv'[39m
+[31m             }[39m
+[31m           }[39m
+[31m         ][39m
+[31m       },[39m
+[31m       select: {[39m
+[31m         id: true,[39m
+[31m         firstName: true,[39m
+[31m         lastName: true,[39m
+[31m         email: true,[39m
+[31m         admin: true[39m
+[31m       }[39m
+[31m     })[39m
+
+[31mArgument equals for where.OR.0.id.equals must not be null. Please use undefined instead.[39m
+
+
+[31m    at ti.validate (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:149:91)[39m
+[31m    at Wr.createMessage (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:164:13655)[39m
+[31m    at C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:174:10933[39m
+[31m    at runInChildSpan (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:70:25817)[39m
+[31m    at t._executeRequest (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:174:10922)[39m
+2023-03-27 15:01:26:126 [31merror[39m: [31mError: [39m
+[31mInvalid `prisma.user.findMany()` invocation in[39m
+[31mC:\Ahmed\programming\apps\3akar\project\api\api\controllers\admin\users.ts:62:37[39m
+
+[31m  59       },[39m
+[31m  60     ],[39m
+[31m  61   };[39m
+[31m→ 62 const users = await prisma.user.findMany({[39m
+[31m       skip: 0,[39m
+[31m       take: 20,[39m
+[31m       where: {[39m
+[31m         OR: [[39m
+[31m           {[39m
+[31m             id: {[39m
+[31m               equals: null[39m
+[31m                       ~~~~[39m
+[31m             }[39m
+[31m           },[39m
+[31m           {[39m
+[31m             email: {[39m
+[31m               contains: 'vdfvfdfv'[39m
+[31m             }[39m
+[31m           },[39m
+[31m           {[39m
+[31m             firstName: {[39m
+[31m               contains: 'vdfvfdfv'[39m
+[31m             }[39m
+[31m           },[39m
+[31m           {[39m
+[31m             lastName: {[39m
+[31m               contains: 'vdfvfdfv'[39m
+[31m             }[39m
+[31m           }[39m
+[31m         ][39m
+[31m       },[39m
+[31m       select: {[39m
+[31m         id: true,[39m
+[31m         firstName: true,[39m
+[31m         lastName: true,[39m
+[31m         email: true,[39m
+[31m         admin: true[39m
+[31m       }[39m
+[31m     })[39m
+
+[31mArgument equals for where.OR.0.id.equals must not be null. Please use undefined instead.[39m
+
+
+[31m    at ti.validate (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:149:91)[39m
+[31m    at Wr.createMessage (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:164:13655)[39m
+[31m    at C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:174:10933[39m
+[31m    at runInChildSpan (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:70:25817)[39m
+[31m    at t._executeRequest (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:174:10922)[39m
+2023-03-27 15:01:29:129 [31merror[39m: [31mError: [39m
+[31mInvalid `prisma.user.findMany()` invocation in[39m
+[31mC:\Ahmed\programming\apps\3akar\project\api\api\controllers\admin\users.ts:62:37[39m
+
+[31m  59       },[39m
+[31m  60     ],[39m
+[31m  61   };[39m
+[31m→ 62 const users = await prisma.user.findMany({[39m
+[31m       skip: 0,[39m
+[31m       take: 20,[39m
+[31m       where: {[39m
+[31m         OR: [[39m
+[31m           {[39m
+[31m             id: {[39m
+[31m               equals: null[39m
+[31m                       ~~~~[39m
+[31m             }[39m
+[31m           },[39m
+[31m           {[39m
+[31m             email: {[39m
+[31m               contains: 'vdfvfdfv'[39m
+[31m             }[39m
+[31m           },[39m
+[31m           {[39m
+[31m             firstName: {[39m
+[31m               contains: 'vdfvfdfv'[39m
+[31m             }[39m
+[31m           },[39m
+[31m           {[39m
+[31m             lastName: {[39m
+[31m               contains: 'vdfvfdfv'[39m
+[31m             }[39m
+[31m           }[39m
+[31m         ][39m
+[31m       },[39m
+[31m       select: {[39m
+[31m         id: true,[39m
+[31m         firstName: true,[39m
+[31m         lastName: true,[39m
+[31m         email: true,[39m
+[31m         admin: true[39m
+[31m       }[39m
+[31m     })[39m
+
+[31mArgument equals for where.OR.0.id.equals must not be null. Please use undefined instead.[39m
+
+
+[31m    at ti.validate (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:149:91)[39m
+[31m    at Wr.createMessage (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:164:13655)[39m
+[31m    at C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:174:10933[39m
+[31m    at runInChildSpan (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:70:25817)[39m
+[31m    at t._executeRequest (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:174:10922)[39m
+2023-03-27 15:29:58:2958 [31merror[39m: [31mError: [39m
+[31mInvalid `prisma.user.findMany()` invocation in[39m
+[31mC:\Ahmed\programming\apps\3akar\project\api\api\controllers\admin\users.ts:63:25[39m
+
+[31m  60     ],[39m
+[31m  61   };[39m
+[31m  62 const [users, count] = await Promise.all([[39m
+[31m→ 63   await prisma.user.findMany({[39m
+[31m         skip: NaN,[39m
+[31m               ~~~[39m
+[31m         take: 1,[39m
+[31m         where: {},[39m
+[31m         select: {[39m
+[31m           id: true,[39m
+[31m           firstName: true,[39m
+[31m           lastName: true,[39m
+[31m           email: true,[39m
+[31m           admin: true[39m
+[31m         }[39m
+[31m       })[39m
+
+[31mArgument skip: Got invalid value NaN on prisma.findManyUser. Provided Float, expected Int.[39m
+
+
+[31m    at ti.validate (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:149:91)[39m
+[31m    at Wr.createMessage (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:164:13655)[39m
+[31m    at C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:174:10933[39m
+[31m    at runInChildSpan (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:70:25817)[39m
+[31m    at t._executeRequest (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:174:10922)[39m
+2023-03-27 15:51:09:519 [31merror[39m: [31mError: [39m
+[31mInvalid `prisma.user.findUnique()` invocation in[39m
+[31mC:\Ahmed\programming\apps\3akar\project\api\api\middleware\admin.ts:11:36[39m
+
+[31m   8   next: NextFunction[39m
+[31m   9 ) => {[39m
+[31m  10   try {[39m
+[31m→ 11     const user = await prisma.user.findUnique([39m
+[31mCan't reach database server at `aws-eu-west-2.connect.psdb.cloud`:`3306`[39m
+
+[31mPlease make sure your database server is running at `aws-eu-west-2.connect.psdb.cloud`:`3306`.[39m
+[31m    at Zr.handleRequestError (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:171:6688)[39m
+[31m    at Zr.handleAndLogRequestError (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:171:5948)[39m
+[31m    at C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:174:3087[39m
+[31m    at async C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:174:3268[39m
+[31m    at async t._executeRequest (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:174:10726)[39m
+2023-03-27 15:51:10:5110 [31merror[39m: [31mError: [39m
+[31mInvalid `prisma.user.findUnique()` invocation in[39m
+[31mC:\Ahmed\programming\apps\3akar\project\api\api\middleware\admin.ts:11:36[39m
+
+[31m   8   next: NextFunction[39m
+[31m   9 ) => {[39m
+[31m  10   try {[39m
+[31m→ 11     const user = await prisma.user.findUnique([39m
+[31mCan't reach database server at `aws-eu-west-2.connect.psdb.cloud`:`3306`[39m
+
+[31mPlease make sure your database server is running at `aws-eu-west-2.connect.psdb.cloud`:`3306`.[39m
+[31m    at Zr.handleRequestError (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:171:6688)[39m
+[31m    at Zr.handleAndLogRequestError (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:171:5948)[39m
+[31m    at C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:174:3087[39m
+[31m    at async C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:174:3268[39m
+[31m    at async t._executeRequest (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:174:10726)[39m
+2023-03-27 22:50:52:5052 [31merror[39m: [31mError: [39m
+[31mInvalid `prisma.user.count()` invocation in[39m
+[31mC:\Ahmed\programming\apps\3akar\project\api\api\controllers\admin\main.ts:32:19[39m
+
+[31m  29 prisma.user.count(),[39m
+[31m  30 prisma.post.count(),[39m
+[31m  31 prisma.comment.count(),[39m
+[31m→ 32 prisma.user.count([39m
+[31mCan't reach database server at `aws-eu-west-2.connect.psdb.cloud`:`3306`[39m
+
+[31mPlease make sure your database server is running at `aws-eu-west-2.connect.psdb.cloud`:`3306`.[39m
+[31m    at Zr.handleRequestError (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:171:6414)[39m
+[31m    at Zr.handleAndLogRequestError (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:171:5948)[39m
+[31m    at Zr.request (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:171:5786)[39m
+2023-03-27 22:51:26:5126 [31merror[39m: [31mError: [39m
+[31mInvalid `prisma.post.count()` invocation in[39m
+[31mC:\Ahmed\programming\apps\3akar\project\api\api\controllers\admin\main.ts:30:19[39m
+
+[31m  27   typeCount,[39m
+[31m  28 ]: any = await Promise.all([[39m
+[31m  29   prisma.user.count(),[39m
+[31m→ 30   prisma.post.count([39m
+[31mCan't reach database server at `aws-eu-west-2.connect.psdb.cloud`:`3306`[39m
+
+[31mPlease make sure your database server is running at `aws-eu-west-2.connect.psdb.cloud`:`3306`.[39m
+[31m    at Zr.handleRequestError (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:171:6414)[39m
+[31m    at Zr.handleAndLogRequestError (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:171:5948)[39m
+[31m    at Zr.request (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:171:5786)[39m
+2023-03-27 23:03:48:348 [31merror[39m: [31mError: [39m
+[31mInvalid `prisma.post.count()` invocation in[39m
+[31mC:\Ahmed\programming\apps\3akar\project\api\api\controllers\admin\main.ts:39:19[39m
+
+[31m  36     },[39m
+[31m  37   },[39m
+[31m  38 }),[39m
+[31m→ 39 prisma.post.count([39m
+[31mCan't reach database server at `aws-eu-west-2.connect.psdb.cloud`:`3306`[39m
+
+[31mPlease make sure your database server is running at `aws-eu-west-2.connect.psdb.cloud`:`3306`.[39m
+[31m    at Zr.handleRequestError (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:171:6414)[39m
+[31m    at Zr.handleAndLogRequestError (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:171:5948)[39m
+[31m    at Zr.request (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:171:5786)[39m
+2023-03-27 23:06:42:642 [31merror[39m: [31mError: [39m
+[31mInvalid `prisma.comment.count()` invocation in[39m
+[31mC:\Ahmed\programming\apps\3akar\project\api\api\controllers\admin\main.ts:31:22[39m
+
+[31m  28 ]: any = await Promise.all([[39m
+[31m  29   prisma.user.count(),[39m
+[31m  30   prisma.post.count(),[39m
+[31m→ 31   prisma.comment.count([39m
+[31mCan't reach database server at `aws-eu-west-2.connect.psdb.cloud`:`3306`[39m
+
+[31mPlease make sure your database server is running at `aws-eu-west-2.connect.psdb.cloud`:`3306`.[39m
+[31m    at Zr.handleRequestError (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:171:6414)[39m
+[31m    at Zr.handleAndLogRequestError (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:171:5948)[39m
+[31m    at Zr.request (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:171:5786)[39m
