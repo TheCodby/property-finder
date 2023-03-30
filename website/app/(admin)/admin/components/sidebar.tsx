@@ -17,8 +17,10 @@ const Sidebar = () => {
   const segments = useSelectedLayoutSegments();
   return (
     <div
-      className={`flex-row text-center text-black transition-all duration-300 z-10 overflow-hidden w-screen h-screen md:h-auto fixed md:static ${
-        !isOpen ? "translate-x-[100%] w-0 " : "translate-x-[0%] md:w-1/4"
+      className={`flex-row text-center text-black transition-all duration-300 z-10 overflow-hidden h-screen md:h-auto fixed md:static ${
+        !isOpen
+          ? "translate-x-[100%] w-0 "
+          : "translate-x-[0%] w-screen md:w-1/4"
       }`}
     >
       <div
