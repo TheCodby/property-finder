@@ -5,10 +5,10 @@ type Props = {};
 export default async function page({}: Props) {
   return (
     <div className="flex flex-col">
-      <div className="h-screen p-28">
-        <div className="flex flex-row justify-between">
-          <div className="w-1/2 flex flex-col justify-center text-right space-y-3">
-            <span className="font-medium text-3xl">
+      <div className="md:h-screen p-10 md:p-28">
+        <div className="flex flex-col md:flex-row justify-between items-center text-center gap-5">
+          <div className="md:w-1/2 flex flex-col justify-center md:text-right space-y-3">
+            <span className="font-medium text-2xl md:text-3xl">
               مرحبًا بك ، نوفر لك أفضل تجربة للبحث/عرض العقارات مع ميزات البحث
               المتقدمة
             </span>
@@ -24,10 +24,10 @@ export default async function page({}: Props) {
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-3 gap-6 px-28 mb-28">
+      <div className="grid md:grid-cols-3 gap-6 px-6 md:px-28 mb-28">
         <div className="card">
           <div className="title">
-            <p>أدوات البحث المتقدمة</p>
+            <p>نص تجريبي</p>
           </div>
           <div className="image relative h-52">
             <Image
@@ -39,13 +39,15 @@ export default async function page({}: Props) {
           </div>
           <div className="description">
             <p>
-              لدينا مجموعة متنوعة ومتميزة من أدوات البحث عبر الخرائط والأحياء
+              هذا نص تجريبي لغرض العرض والتجربة هذا نص تجريبي لغرض العرض
+              والتجربة هذا نص تجريبي لغرض العرض والتجربة هذا نص تجريبي لغرض
+              العرض والتجربة هذا نص تجريبي لغرض العرض والتجربة
             </p>
           </div>
         </div>
         <div className="card">
           <div className="title">
-            <p>تجربة</p>
+            <p>نص تجريبي</p>
           </div>
           <div className="image relative h-52">
             <Image
@@ -57,13 +59,15 @@ export default async function page({}: Props) {
           </div>
           <div className="description">
             <p>
-              لدينا مجموعة متنوعة ومتميزة من أدوات البحث عبر الخرائط والأحياء
+              هذا نص تجريبي لغرض العرض والتجربة هذا نص تجريبي لغرض العرض
+              والتجربة هذا نص تجريبي لغرض العرض والتجربة هذا نص تجريبي لغرض
+              العرض والتجربة هذا نص تجريبي لغرض العرض والتجربة
             </p>
           </div>
         </div>
         <div className="card">
           <div className="title">
-            <p>حاسبة المساحة</p>
+            <p>نص تجريبي</p>
           </div>
           <div className="image relative h-52">
             <Image
@@ -75,7 +79,9 @@ export default async function page({}: Props) {
           </div>
           <div className="description">
             <p>
-              لدينا مجموعة متنوعة ومتميزة من أدوات البحث عبر الخرائط والأحياء
+              هذا نص تجريبي لغرض العرض والتجربة هذا نص تجريبي لغرض العرض
+              والتجربة هذا نص تجريبي لغرض العرض والتجربة هذا نص تجريبي لغرض
+              العرض والتجربة هذا نص تجريبي لغرض العرض والتجربة
             </p>
           </div>
         </div>

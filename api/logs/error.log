@@ -6616,3 +6616,124 @@
 [31m    at Zr.handleRequestError (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:171:6414)[39m
 [31m    at Zr.handleAndLogRequestError (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:171:5948)[39m
 [31m    at Zr.request (C:\Ahmed\programming\apps\3akar\project\node_modules\@prisma\client\runtime\library.js:171:5786)[39m
+2023-03-30 21:51:40:5140 [31merror[39m: [31mError: [39m
+[31mInvalid `prisma.user.findUnique()` invocation in[39m
+[31mC:\Ahmed\programming\apps\property-finder\api\api\middleware\admin.ts:11:36[39m
+
+[31m   8   next: NextFunction[39m
+[31m   9 ) => {[39m
+[31m  10   try {[39m
+[31m→ 11     const user = await prisma.user.findUnique([39m
+[31mCan't reach database server at `localhost`:`3306`[39m
+
+[31mPlease make sure your database server is running at `localhost`:`3306`.[39m
+[31m    at Zr.handleRequestError (C:\Ahmed\programming\apps\property-finder\node_modules\@prisma\client\runtime\library.js:171:6688)[39m
+[31m    at Zr.handleAndLogRequestError (C:\Ahmed\programming\apps\property-finder\node_modules\@prisma\client\runtime\library.js:171:5948)[39m
+[31m    at C:\Ahmed\programming\apps\property-finder\node_modules\@prisma\client\runtime\library.js:174:3087[39m
+[31m    at async C:\Ahmed\programming\apps\property-finder\node_modules\@prisma\client\runtime\library.js:174:3268[39m
+2023-03-30 21:51:40:5140 [31merror[39m: [31mError: [39m
+[31mInvalid `prisma.user.findUnique()` invocation in[39m
+[31mC:\Ahmed\programming\apps\property-finder\api\api\middleware\admin.ts:11:36[39m
+
+[31m   8   next: NextFunction[39m
+[31m   9 ) => {[39m
+[31m  10   try {[39m
+[31m→ 11     const user = await prisma.user.findUnique([39m
+[31mCan't reach database server at `localhost`:`3306`[39m
+
+[31mPlease make sure your database server is running at `localhost`:`3306`.[39m
+[31m    at Zr.handleRequestError (C:\Ahmed\programming\apps\property-finder\node_modules\@prisma\client\runtime\library.js:171:6688)[39m
+[31m    at Zr.handleAndLogRequestError (C:\Ahmed\programming\apps\property-finder\node_modules\@prisma\client\runtime\library.js:171:5948)[39m
+[31m    at C:\Ahmed\programming\apps\property-finder\node_modules\@prisma\client\runtime\library.js:174:3087[39m
+[31m    at async C:\Ahmed\programming\apps\property-finder\node_modules\@prisma\client\runtime\library.js:174:3268[39m
+2023-03-30 21:51:40:5140 [31merror[39m: [31mError: [39m
+[31mInvalid `prisma.user.findUnique()` invocation in[39m
+[31mC:\Ahmed\programming\apps\property-finder\api\api\middleware\admin.ts:11:36[39m
+
+[31m   8   next: NextFunction[39m
+[31m   9 ) => {[39m
+[31m  10   try {[39m
+[31m→ 11     const user = await prisma.user.findUnique([39m
+[31mCan't reach database server at `localhost`:`3306`[39m
+
+[31mPlease make sure your database server is running at `localhost`:`3306`.[39m
+[31m    at Zr.handleRequestError (C:\Ahmed\programming\apps\property-finder\node_modules\@prisma\client\runtime\library.js:171:6688)[39m
+[31m    at Zr.handleAndLogRequestError (C:\Ahmed\programming\apps\property-finder\node_modules\@prisma\client\runtime\library.js:171:5948)[39m
+[31m    at C:\Ahmed\programming\apps\property-finder\node_modules\@prisma\client\runtime\library.js:174:3087[39m
+[31m    at async C:\Ahmed\programming\apps\property-finder\node_modules\@prisma\client\runtime\library.js:174:3268[39m
+2023-03-30 21:51:41:5141 [31merror[39m: [31mError: [39m
+[31mInvalid `prisma.user.findUnique()` invocation in[39m
+[31mC:\Ahmed\programming\apps\property-finder\api\api\middleware\admin.ts:11:36[39m
+
+[31m   8   next: NextFunction[39m
+[31m   9 ) => {[39m
+[31m  10   try {[39m
+[31m→ 11     const user = await prisma.user.findUnique([39m
+[31mCan't reach database server at `localhost`:`3306`[39m
+
+[31mPlease make sure your database server is running at `localhost`:`3306`.[39m
+[31m    at Zr.handleRequestError (C:\Ahmed\programming\apps\property-finder\node_modules\@prisma\client\runtime\library.js:171:6688)[39m
+[31m    at Zr.handleAndLogRequestError (C:\Ahmed\programming\apps\property-finder\node_modules\@prisma\client\runtime\library.js:171:5948)[39m
+[31m    at C:\Ahmed\programming\apps\property-finder\node_modules\@prisma\client\runtime\library.js:174:3087[39m
+[31m    at async C:\Ahmed\programming\apps\property-finder\node_modules\@prisma\client\runtime\library.js:174:3268[39m
+2023-03-30 21:51:46:5146 [31merror[39m: [31mError: [39m
+[31mInvalid `prisma.user.findUnique()` invocation in[39m
+[31mC:\Ahmed\programming\apps\property-finder\api\api\middleware\admin.ts:11:36[39m
+
+[31m   8   next: NextFunction[39m
+[31m   9 ) => {[39m
+[31m  10   try {[39m
+[31m→ 11     const user = await prisma.user.findUnique([39m
+[31mCan't reach database server at `localhost`:`3306`[39m
+
+[31mPlease make sure your database server is running at `localhost`:`3306`.[39m
+[31m    at Zr.handleRequestError (C:\Ahmed\programming\apps\property-finder\node_modules\@prisma\client\runtime\library.js:171:6688)[39m
+[31m    at Zr.handleAndLogRequestError (C:\Ahmed\programming\apps\property-finder\node_modules\@prisma\client\runtime\library.js:171:5948)[39m
+[31m    at C:\Ahmed\programming\apps\property-finder\node_modules\@prisma\client\runtime\library.js:174:3087[39m
+[31m    at async C:\Ahmed\programming\apps\property-finder\node_modules\@prisma\client\runtime\library.js:174:3268[39m
+2023-03-30 21:51:50:5150 [31merror[39m: [31mError: [39m
+[31mInvalid `prisma.user.findUnique()` invocation in[39m
+[31mC:\Ahmed\programming\apps\property-finder\api\api\middleware\admin.ts:11:36[39m
+
+[31m   8   next: NextFunction[39m
+[31m   9 ) => {[39m
+[31m  10   try {[39m
+[31m→ 11     const user = await prisma.user.findUnique([39m
+[31mCan't reach database server at `localhost`:`3306`[39m
+
+[31mPlease make sure your database server is running at `localhost`:`3306`.[39m
+[31m    at Zr.handleRequestError (C:\Ahmed\programming\apps\property-finder\node_modules\@prisma\client\runtime\library.js:171:6688)[39m
+[31m    at Zr.handleAndLogRequestError (C:\Ahmed\programming\apps\property-finder\node_modules\@prisma\client\runtime\library.js:171:5948)[39m
+[31m    at C:\Ahmed\programming\apps\property-finder\node_modules\@prisma\client\runtime\library.js:174:3087[39m
+[31m    at async C:\Ahmed\programming\apps\property-finder\node_modules\@prisma\client\runtime\library.js:174:3268[39m
+2023-03-30 21:51:54:5154 [31merror[39m: [31mError: [39m
+[31mInvalid `prisma.user.findUnique()` invocation in[39m
+[31mC:\Ahmed\programming\apps\property-finder\api\api\middleware\admin.ts:11:36[39m
+
+[31m   8   next: NextFunction[39m
+[31m   9 ) => {[39m
+[31m  10   try {[39m
+[31m→ 11     const user = await prisma.user.findUnique([39m
+[31mCan't reach database server at `localhost`:`3306`[39m
+
+[31mPlease make sure your database server is running at `localhost`:`3306`.[39m
+[31m    at Zr.handleRequestError (C:\Ahmed\programming\apps\property-finder\node_modules\@prisma\client\runtime\library.js:171:6688)[39m
+[31m    at Zr.handleAndLogRequestError (C:\Ahmed\programming\apps\property-finder\node_modules\@prisma\client\runtime\library.js:171:5948)[39m
+[31m    at C:\Ahmed\programming\apps\property-finder\node_modules\@prisma\client\runtime\library.js:174:3087[39m
+[31m    at async C:\Ahmed\programming\apps\property-finder\node_modules\@prisma\client\runtime\library.js:174:3268[39m
+2023-03-30 21:53:14:5314 [31merror[39m: [31mError: [39m
+[31mInvalid `prisma.user.findUnique()` invocation in[39m
+[31mC:\Ahmed\programming\apps\property-finder\api\api\middleware\admin.ts:11:36[39m
+
+[31m   8   next: NextFunction[39m
+[31m   9 ) => {[39m
+[31m  10   try {[39m
+[31m→ 11     const user = await prisma.user.findUnique([39m
+[31mCan't reach database server at `localhost`:`3306`[39m
+
+[31mPlease make sure your database server is running at `localhost`:`3306`.[39m
+[31m    at Zr.handleRequestError (C:\Ahmed\programming\apps\property-finder\node_modules\@prisma\client\runtime\library.js:171:6688)[39m
+[31m    at Zr.handleAndLogRequestError (C:\Ahmed\programming\apps\property-finder\node_modules\@prisma\client\runtime\library.js:171:5948)[39m
+[31m    at C:\Ahmed\programming\apps\property-finder\node_modules\@prisma\client\runtime\library.js:174:3087[39m
+[31m    at async C:\Ahmed\programming\apps\property-finder\node_modules\@prisma\client\runtime\library.js:174:3268[39m
+[31m    at async t._executeRequest (C:\Ahmed\programming\apps\property-finder\node_modules\@prisma\client\runtime\library.js:174:10726)[39m

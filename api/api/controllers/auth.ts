@@ -87,6 +87,7 @@ export const signIn = async (req: Request, res: Response): Promise<any> => {
         verified: user.verified,
         first_name: user.firstName,
         last_name: user.lastName,
+        admin: user.admin,
         deviceId,
       },
       process.env.JWT_SECRET_KEY as string,

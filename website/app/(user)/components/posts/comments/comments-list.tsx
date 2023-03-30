@@ -51,7 +51,7 @@ const Comments: React.FC<{
     setPageNow(newPage);
   };
   return (
-    <div className="flex flex-col gap-4 basis-2/3 mb-3">
+    <div className="flex flex-col gap-4 w-full md:basis-2/3 mb-3">
       {data.comments.length === 0 ? (
         <p className="text-center text-3xl">لا يوجد تعليقات</p>
       ) : (

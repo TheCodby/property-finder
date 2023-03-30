@@ -8,6 +8,7 @@ import {
   AiOutlineSearch,
   AiOutlineUser,
 } from "react-icons/ai";
+import { MdOutlineAdminPanelSettings } from "react-icons/md";
 import { useNotifs } from "@/stores/notifs";
 import { getCookie, setCookie } from "cookies-next";
 import { useQuery } from "react-query";
@@ -70,6 +71,12 @@ const Header: React.FC = () => {
               <AiOutlineAppstoreAdd />
               إضافة
             </Link>
+            {user.admin ? (
+              <Link href="/admin/dashboard" className="font-semibold">
+                <MdOutlineAdminPanelSettings />
+                لوحة التحكم
+              </Link>
+            ) : null}
             {/* <a className="font-semibold inline-flex gap-x-1 items-center">
               <AiOutlineUser />
               {user?.get("first_name")}
