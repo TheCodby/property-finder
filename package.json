@@ -5,7 +5,6 @@
   "author": "Codby",
   "license": "MIT",
   "scripts": {
-    "postinstall": "preconstruct dev && manypkg check",
     "website:build": "yarn workspace @property-finder/website build",
     "website:start": "yarn workspace @property-finder/website start",
     "website:dev": "yarn workspace @property-finder/website dev",
@@ -25,14 +24,7 @@
     "database"
   ],
   "dependencies": {
-    "@manypkg/cli": "^0.20.0",
-    "@preconstruct/cli": "^2.3.0",
     "countup.js": "^2.6.0"
-  },
-  "preconstruct": {
-    "packages": [
-      "database"
-    ]
   },
   "devDependencies": {
     "concurrently": "^7.6.0"

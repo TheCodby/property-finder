@@ -1,0 +1,52 @@
+# Build stage
+FROM node:18-alpine AS builder
+
+WORKDIR /app
+
+# Copy package files
+COPY package.json yarn.lock ./
+COPY api/package.json ./api/
+COPY database/package.json ./database/
+
+# Install dependencies
+RUN yarn install --frozen-lockfile
+
+# Copy source code
+COPY . .
+
+# Build database package
+WORKDIR /app/database
+RUN yarn build
+
+# Build API
+WORKDIR /app
+RUN yarn db:generate
+
+# Production stage
+FROM node:18-alpine
+
+WORKDIR /app
+
+# Copy built artifacts from builder
+COPY --from=builder /app/node_modules ./node_modules
+COPY --from=builder /app/api ./api
+COPY --from=builder /app/database/dist ./database/dist
+COPY --from=builder /app/database/package.json ./database/package.json
+COPY --from=builder /app/package.json ./package.json
+COPY --from=builder /app/yarn.lock ./yarn.lock
+
+# Install production dependencies only
+RUN yarn install --production --frozen-lockfile
+
+# Create non-root user
+RUN addgroup -g 1001 -S nodejs && \
+    adduser -S nextjs -u 1001 && \
+    chown -R nextjs:nodejs /app
+
+USER nextjs
+
+# Expose port
+EXPOSE 3001
+
+# Start the API
+CMD ["yarn", "api:start"] 
